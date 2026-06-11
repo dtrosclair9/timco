@@ -4,7 +4,7 @@
 export const SITE = {
   name: 'TIMCO',
   legalName: 'TIMCO LLC',
-  tagline: 'Property Restoration, Land Management & Retriever Training in Thibodaux, LA',
+  tagline: 'Property & Land Management, Restoration & Maintenance in Thibodaux, LA',
   baseUrl: 'https://timcola.com', // TODO: confirm domain spelling before launch
   owner: 'Timothy Cailouet',
   ownerShort: 'Tim',
@@ -34,50 +34,88 @@ export const SITE = {
   established: 2021,
 } as const
 
+// Every service belongs to one of two buckets, each of which has a hub page.
 export const SERVICES = [
   {
     slug: 'property-restoration',
     title: 'Property Restoration',
-    short: 'Overgrown to usable — residential and commercial.',
-    lead: 'Complete site cleanup of neglected residential and commercial lots. Brush clearing, grass cutting, tree trimming, debris and trash removal, full site work — then ongoing lawn care if you want it.',
+    short: 'Overgrown homes and businesses brought back to usable.',
+    lead: 'One-time cleanup of neglected residential and commercial lots — brush clearing, grass cutting, tree trimming, debris and trash removal, and full site work around homes and buildings. Hand it off looking like new.',
     icon: 'restoration',
     image: '/images/restoration-after-1.jpg',
+    bucket: 'property',
+  },
+  {
+    slug: 'residential-property-management',
+    title: 'Residential Property Management',
+    short: 'Recurring lawn and grounds care for homeowners.',
+    lead: 'Scheduled lawn care for your home — grass cutting, weed eating, chemical spraying, tree trimming, and debris cleanup. Weekly, bi-weekly, or monthly. Your yard stays sharp without you lifting a finger.',
+    icon: 'commercial',
+    image: '/images/comm-after-white-home.jpg',
+    bucket: 'property',
+  },
+  {
+    slug: 'commercial-property-management',
+    title: 'Commercial Property Management',
+    short: 'Grounds maintenance for offices, apartments, and HOAs.',
+    lead: 'Recurring grounds maintenance for commercial properties — offices, apartment complexes, and HOA common areas. Grass cutting, weed eating, spraying, tree trimming, and debris cleanup on a schedule that keeps your property presentable year-round.',
+    icon: 'commercial',
+    image: '/images/comm-bobcat-apartments.jpg',
+    bucket: 'property',
+  },
+  {
+    slug: 'land-restoration',
+    title: 'Land Restoration',
+    short: 'Reclaiming raw and rural acreage at scale.',
+    lead: 'Large-scale clearing of neglected rural land — overgrown fields, wooded acreage, and tracts that have gotten away. Brush and tree clearing, drainage, and full site work to bring land back into usable, accessible shape.',
+    icon: 'restoration',
+    image: '/images/restoration-bobcat-1.jpg',
+    bucket: 'land',
   },
   {
     slug: 'recreational-land-management',
     title: 'Recreational Land Management',
-    short: 'Acreage care for hunters, recreational owners, and landholders.',
-    lead: 'Cutting, spraying, drainage, prescribed burns, tree clearing — keeping rural land productive and accessible season after season.',
+    short: 'Ongoing acreage care for hunters and landholders.',
+    lead: 'Cutting, spraying, drainage, prescribed burns, tree clearing, and shooting-lane work — keeping rural and recreational land productive and accessible season after season.',
     icon: 'land',
     image: '/images/land-pine.jpg',
-  },
-  {
-    slug: 'commercial-property-maintenance',
-    title: 'Commercial Property Maintenance',
-    short: 'Lawn care and grounds maintenance for residential, HOAs, offices, and apartments.',
-    lead: 'Recurring lawn care, grass cutting, weed eating, chemical spraying, tree trimming, and debris cleanup — for homeowners and for commercial properties (offices, apartments, HOAs). Weekly, bi-weekly, or monthly visits.',
-    icon: 'commercial',
-    image: '/images/comm-bobcat-apartments.jpg',
-  },
-  {
-    slug: 'retriever-training',
-    title: 'Retriever Training',
-    short: 'Board-and-train for Labradors and gun dogs.',
-    lead: '3 to 9 month programs at our Thibodaux kennel — basic obedience, basic retriever, advanced (duck blind etiquette, hand signals). 10 runs.',
-    icon: 'retriever',
-    image: '/images/retriever-hero-boat.jpg',
-    division: 'TIMCO Kennels',
+    bucket: 'land',
   },
 ] as const
 
 export type ServiceSlug = (typeof SERVICES)[number]['slug']
+export type Bucket = (typeof SERVICES)[number]['bucket']
+
+export const propertyServices = SERVICES.filter((s) => s.bucket === 'property')
+export const landServices = SERVICES.filter((s) => s.bucket === 'land')
+
+// Two category hub pages, each introducing its bucket and linking to its leaf services.
+export const BUCKETS = [
+  {
+    slug: 'property-management',
+    bucket: 'property',
+    title: 'Property Management',
+    short: 'Restoration and recurring care for homes and businesses.',
+    lead: 'Everything that keeps a developed property sharp — from one-time cleanup of an overgrown lot to scheduled lawn and grounds care for homeowners, offices, apartments, and HOAs.',
+    image: '/images/comm-after-white-home.jpg',
+  },
+  {
+    slug: 'land-management',
+    bucket: 'land',
+    title: 'Land Management',
+    short: 'Reclaiming and maintaining rural and recreational acreage.',
+    lead: 'Care for the rural side — large-scale land restoration that brings neglected acreage back, plus ongoing recreational land management for hunters and landholders who need their ground to stay productive.',
+    image: '/images/land-pasture.jpg',
+  },
+] as const
+
+export type BucketSlug = (typeof BUCKETS)[number]['slug']
 
 export const CITY_PAGES = [
   { service: 'property-restoration', city: 'thibodaux', cityName: 'Thibodaux' },
   { service: 'property-restoration', city: 'houma', cityName: 'Houma' },
   { service: 'recreational-land-management', city: 'thibodaux', cityName: 'Thibodaux' },
   { service: 'recreational-land-management', city: 'houma', cityName: 'Houma' },
-  { service: 'retriever-training', city: 'thibodaux', cityName: 'Thibodaux' },
 ] as const
 
 export const NAV_LINKS = [
@@ -86,11 +124,8 @@ export const NAV_LINKS = [
     href: '/services',
     label: 'Services',
     children: [
-      { group: 'Property & Land', items: SERVICES.filter((s) => !('division' in s)) },
-      {
-        group: 'Kennels',
-        items: SERVICES.filter((s) => 'division' in s),
-      },
+      { group: 'Property Management', href: '/services/property-management', items: propertyServices },
+      { group: 'Land Management', href: '/services/land-management', items: landServices },
     ],
   },
   { href: '/about', label: 'About' },

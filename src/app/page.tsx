@@ -1,16 +1,16 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import { SERVICES, SITE } from '@/lib/site'
+import { SERVICES, BUCKETS, propertyServices, landServices, SITE } from '@/lib/site'
 
 export const metadata: Metadata = {
-  title: `${SITE.name} | Property Restoration & Retriever Training in Thibodaux, LA`,
+  title: `${SITE.name} | Property & Land Management in Thibodaux, LA`,
   description:
-    'TIMCO restores overgrown properties and trains Labrador retrievers from Thibodaux, LA. Land clearing, commercial maintenance, prescribed burns, board-and-train kennel. Insured. Call 985.665.7298.',
+    'TIMCO restores and maintains property and land from Thibodaux, LA. Property restoration, residential and commercial property management, land restoration, recreational land management. Insured. Call 985.665.7298.',
   openGraph: {
-    title: `${SITE.name} | Property Restoration & Retriever Training in Thibodaux, LA`,
+    title: `${SITE.name} | Property & Land Management in Thibodaux, LA`,
     description:
-      'TIMCO restores overgrown properties and trains Labrador retrievers in Thibodaux, LA. Insured. Call 985.665.7298.',
+      'TIMCO restores and maintains property and land across the Bayou Region. Insured. Call 985.665.7298.',
     url: SITE.baseUrl,
   },
   alternates: { canonical: SITE.baseUrl },
@@ -25,7 +25,7 @@ const schema = {
       name: SITE.legalName,
       alternateName: SITE.name,
       description:
-        'Lawn care, property restoration, land management, and Labrador retriever training in Thibodaux, Louisiana.',
+        'Property restoration, residential and commercial property management, land restoration, and recreational land management in Thibodaux, Louisiana.',
       url: SITE.baseUrl,
       telephone: SITE.phoneRaw,
       email: SITE.email,
@@ -105,9 +105,8 @@ export default function HomePage() {
             back to usable land.
           </h1>
           <p className="lede text-gray-200 mt-7 max-w-xl">
-            Weekly lawn care, brush clearing, tree work, debris removal, drainage,
-            prescribed burns — for residential homes and commercial properties.
-            Plus a Labrador retriever kennel that turns pups into duck-blind partners.
+            Brush clearing, tree work, debris removal, drainage, prescribed burns,
+            and recurring lawn care — for homes, businesses, and rural acreage.
             One operator. One headquarters. {SITE.address.city}, {SITE.address.region}.
           </p>
           <div className="mt-10 flex flex-wrap gap-3">
@@ -153,12 +152,12 @@ export default function HomePage() {
             <BeforeAfter
               beforeSrc="/images/restoration-before-1.jpg"
               afterSrc="/images/restoration-after-1.jpg"
-              caption="Residential lot — brush + clearing"
+              caption="Property edge — brush + clearing"
             />
             <BeforeAfter
               beforeSrc="/images/restoration-before-2.jpg"
               afterSrc="/images/restoration-after-2.jpg"
-              caption="Rural lot — bobcat clearing"
+              caption="Rural acreage — bobcat clearing"
             />
           </div>
 
@@ -179,46 +178,59 @@ export default function HomePage() {
           <div className="text-center mb-14 max-w-2xl mx-auto">
             <p className="section-label">What TIMCO Does</p>
             <h2 id="services-heading" className="heading-xl text-primary mt-3 text-balance">
-              Four service lines.<br />One HQ on Hwy&nbsp;308.
+              Two divisions.<br />One HQ on Hwy&nbsp;308.
             </h2>
             <p className="lede mt-5">
-              Weekly lawn care and maintenance for residential and commercial property, full-on restoration when a lot has gotten away, recreational land care for the rural side, plus a working Labrador retriever kennel.
+              Property management keeps homes and businesses sharp — from a one-time restoration to recurring lawn and grounds care. Land management reclaims and maintains the rural side, acre after acre.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-            {SERVICES.map((service) => (
-              <Link
-                key={service.slug}
-                href={`/services/${service.slug}`}
-                className="group relative overflow-hidden bg-white shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100"
-              >
-                <div className="relative h-56 md:h-64 overflow-hidden">
-                  <Image
-                    src={service.image}
-                    alt={`${service.title} by TIMCO in Thibodaux, Louisiana`}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-700"
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent" />
-                  {'division' in service && (
-                    <span className="absolute top-4 left-4 bg-accent text-white text-[10px] font-bold uppercase tracking-mega px-3 py-1.5">
-                      {service.division}
-                    </span>
-                  )}
-                  <div className="absolute bottom-5 left-5 right-5">
-                    <h3 className="heading-md text-white">{service.title}</h3>
+          <div className="space-y-14">
+            {BUCKETS.map((bucket) => {
+              const items = bucket.bucket === 'property' ? propertyServices : landServices
+              return (
+                <div key={bucket.slug}>
+                  <div className="flex items-end justify-between border-b border-gray-200 pb-3 mb-6">
+                    <h3 className="heading-md text-primary">{bucket.title}</h3>
+                    <Link
+                      href={`/services/${bucket.slug}`}
+                      className="text-accent hover:text-accent-dark text-xs font-bold uppercase tracking-mega shrink-0"
+                    >
+                      View all →
+                    </Link>
+                  </div>
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                    {items.map((service) => (
+                      <Link
+                        key={service.slug}
+                        href={`/services/${service.slug}`}
+                        className="group relative overflow-hidden bg-white shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100"
+                      >
+                        <div className="relative h-52 overflow-hidden">
+                          <Image
+                            src={service.image}
+                            alt={`${service.title} by TIMCO in Thibodaux, Louisiana`}
+                            fill
+                            className="object-cover group-hover:scale-105 transition-transform duration-700"
+                            sizes="(max-width: 768px) 100vw, 33vw"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent" />
+                          <div className="absolute bottom-5 left-5 right-5">
+                            <h4 className="heading-sm text-white">{service.title}</h4>
+                          </div>
+                        </div>
+                        <div className="p-6">
+                          <p className="text-sm text-gray-700 leading-relaxed">{service.lead}</p>
+                          <p className="mt-4 text-accent text-xs font-bold uppercase tracking-mega group-hover:text-accent-dark transition-colors">
+                            Learn more →
+                          </p>
+                        </div>
+                      </Link>
+                    ))}
                   </div>
                 </div>
-                <div className="p-6">
-                  <p className="text-sm text-gray-700 leading-relaxed">{service.lead}</p>
-                  <p className="mt-4 text-accent text-xs font-bold uppercase tracking-mega group-hover:text-accent-dark transition-colors">
-                    Learn more →
-                  </p>
-                </div>
-              </Link>
-            ))}
+              )
+            })}
           </div>
         </div>
       </section>
@@ -243,22 +255,22 @@ export default function HomePage() {
             <div className="lg:col-span-7">
               <p className="section-label">About TIMCO</p>
               <h2 id="about-snippet-heading" className="heading-xl text-primary mt-3 max-w-lg text-balance">
-                One operator.<br />Three sides of the same business.
+                One operator.<br />Two sides of the same business.
               </h2>
               <div className="mt-6 space-y-4 text-gray-700 leading-relaxed">
                 <p>
-                  TIMCO was founded by <strong className="text-primary">{SITE.owner}</strong> in {SITE.established} as a property and land restoration company — rooted in {SITE.address.city} and built on showing up, doing the work, and leaving the place better than we found it.
+                  TIMCO was founded by <strong className="text-primary">{SITE.owner}</strong> in {SITE.established} as a property and land company — rooted in {SITE.address.city} and built on showing up, doing the work, and leaving the place better than we found it.
                 </p>
                 <p>
-                  Today the same HQ on Hwy&nbsp;308 also runs <strong className="text-primary">TIMCO Kennels</strong>, a 10-run Labrador retriever board-and-train program for hunters and gun-dog owners across the Bayou Region. Different work, same standard.
+                  From the same HQ on Hwy&nbsp;308, TIMCO handles two sides of the same job: <strong className="text-primary">property management</strong> for homes and businesses, and <strong className="text-primary">land management</strong> for the rural acreage that needs reclaiming or maintaining. Different ground, same standard.
                 </p>
               </div>
               <div className="mt-8 flex flex-wrap gap-3">
                 <Link href="/about" className="btn-outline-dark text-xs">
                   Meet TIMCO
                 </Link>
-                <Link href="/services/retriever-training" className="btn-ghost">
-                  See the kennel →
+                <Link href="/services" className="btn-ghost">
+                  See all services →
                 </Link>
               </div>
             </div>

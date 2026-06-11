@@ -10,15 +10,15 @@ import {
   buildServiceSchema,
 } from '@/components/ServiceFrame'
 
-const SLUG = 'commercial-property-maintenance'
+const SLUG = 'commercial-property-management'
 
 export const metadata: Metadata = {
-  title: 'Lawn Care & Property Maintenance in Thibodaux, LA – Residential & Commercial',
+  title: 'Commercial Property Management in Thibodaux, LA – Offices, Apartments, HOAs',
   description:
-    'TIMCO handles weekly lawn care and grounds maintenance for residential homeowners and commercial properties — offices, apartments, HOAs. Grass cutting, weed eating, spraying, trimming, debris cleanup. Insured.',
+    'TIMCO handles grounds maintenance for commercial properties in Thibodaux, LA — offices, apartment complexes, and HOA common areas. Grass cutting, weed eating, spraying, trimming, debris cleanup on a reliable schedule. Insured.',
   openGraph: {
-    title: 'Lawn Care & Property Maintenance in Thibodaux, LA | TIMCO',
-    description: 'Weekly lawn care and grounds maintenance for residential and commercial properties.',
+    title: 'Commercial Property Management in Thibodaux, LA | TIMCO',
+    description: 'Recurring grounds maintenance for offices, apartments, and HOAs across the Bayou Region.',
     url: `${SITE.baseUrl}/services/${SLUG}`,
   },
   alternates: { canonical: `${SITE.baseUrl}/services/${SLUG}` },
@@ -26,53 +26,52 @@ export const metadata: Metadata = {
 
 const schema = buildServiceSchema({
   slug: SLUG,
-  name: 'Lawn Care & Property Maintenance',
+  name: 'Commercial Property Management',
   description:
-    'Recurring lawn care and property maintenance in Thibodaux, LA — grass cutting, weed eating, chemical spraying, tree trimming, debris cleanup for residential homeowners and commercial properties (offices, apartments, HOAs).',
+    'Recurring commercial grounds maintenance in Thibodaux, LA — grass cutting, weed eating, chemical spraying, tree trimming, and debris cleanup for offices, apartment complexes, and HOA common areas.',
 })
 
-export default function CommercialMaintenancePage() {
+export default function CommercialPropertyManagementPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
 
       <ServiceHero
-        label="Property & Land"
+        label="Property Management"
         title={
           <>
-            Lawn care &amp; property<br />
-            <span className="text-accent">maintenance</span>.
+            Commercial property<br />
+            <span className="text-accent">management</span>.
           </>
         }
         intro={
           <>
-            Weekly grass cutting, weed eating, spraying, and trimming for
-            <strong className="text-white"> residential homeowners</strong> and
-            <strong className="text-white"> commercial properties</strong> —
-            offices, apartment complexes, HOAs, mixed-use sites. A local Thibodaux
-            crew — this is the bread-and-butter work TIMCO has been doing since 2021.
+            Recurring grounds maintenance for
+            <strong className="text-white"> offices, apartment complexes, and HOAs</strong> across
+            the Bayou Region. Predictable schedule, predictable invoice, certificate of
+            insurance on file — the property stays presentable without you managing the crew.
           </>
         }
-        image="/images/comm-after-white-home.jpg"
-        imageAlt="Maintained residential property with manicured lawn — TIMCO lawn care in Thibodaux, LA"
+        image="/images/comm-bobcat-apartments.jpg"
+        imageAlt="TIMCO Bobcat mowing apartment grounds — commercial property management in Thibodaux, LA"
       />
 
       <IncludedList
         label="What's Included"
-        heading="The full lawn-care package, on a schedule."
-        description="We build a maintenance plan around your visit frequency — weekly, bi-weekly, monthly. Residential or commercial, the schedule stays on the calendar so your property never falls behind."
+        heading="Full grounds maintenance, on a schedule."
+        description="We build a maintenance plan around your visit frequency — weekly, bi-weekly, or monthly. The schedule stays on the calendar so common areas, entrances, and frontage never fall behind."
         items={[
           'Grass cutting / mowing',
           'Weed eating &amp; edging',
           'Chemical spraying (weed kill, fence lines, hardscape)',
-          'Mulching',
+          'Mulching &amp; bed maintenance',
           'Tree trimming &amp; clearance for signage / sightlines',
           'Brush &amp; small tree removal',
           'Storm debris cleanup',
           'Trash &amp; debris haul-off between visits',
         ]}
-        image="/images/comm-bobcat-apartments.jpg"
-        imageAlt="TIMCO Bobcat zero-turn mowing apartment grounds in Thibodaux, LA"
+        image="/images/comm-twelve-oaks.jpg"
+        imageAlt="HOA subdivision entrance with manicured landscaping maintained by TIMCO in Thibodaux, LA"
       />
 
       {/* Who we work for */}
@@ -81,22 +80,22 @@ export default function CommercialMaintenancePage() {
           <div className="text-center mb-12 max-w-2xl mx-auto">
             <p className="section-label">Who We Work For</p>
             <h2 className="heading-xl text-primary mt-3 text-balance">
-              Residential homeowners. Commercial managers. Same standard.
+              Property managers and commercial owners across the Bayou Region.
             </h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <article className="bg-gray-50 p-8 border-t-4 border-accent">
-              <p className="text-xs font-bold uppercase tracking-mega text-accent">Residential</p>
-              <h3 className="heading-sm text-primary mt-2">Homeowner lawn care.</h3>
+              <p className="text-xs font-bold uppercase tracking-mega text-accent">Offices &amp; Apartments</p>
+              <h3 className="heading-sm text-primary mt-2">Frontage that stays sharp.</h3>
               <p className="text-sm text-gray-700 mt-3 leading-relaxed">
-                Weekly or bi-weekly visits across {SITE.address.city}, Houma, Raceland, Chackbay, Napoleonville, and Schriever. Mowing, weed eating, trimming, cleanup — your yard handled while you&apos;re at work or out of town. No long-term contract required.
+                Recurring maintenance for office parks, apartment complexes, and mixed-use sites. Predictable monthly invoice, certificate of insurance on file, reliable visit schedule. Storm callouts prioritized for accounts already on the books.
               </p>
             </article>
             <article className="bg-gray-50 p-8 border-t-4 border-accent">
-              <p className="text-xs font-bold uppercase tracking-mega text-accent">Commercial</p>
-              <h3 className="heading-sm text-primary mt-2">Offices, apartments, HOAs.</h3>
+              <p className="text-xs font-bold uppercase tracking-mega text-accent">HOAs &amp; Common Areas</p>
+              <h3 className="heading-sm text-primary mt-2">Entrances, medians, shared grounds.</h3>
               <p className="text-sm text-gray-700 mt-3 leading-relaxed">
-                Recurring maintenance for property managers and commercial owners. Predictable monthly invoice, certificate of insurance on file, reliable visit schedule. Storm callouts prioritized for accounts already on the books.
+                Subdivision entrances, retention areas, and common grounds kept presentable for residents and boards. One point of contact, one schedule, one invoice — no chasing down separate crews for separate tasks.
               </p>
             </article>
           </div>
@@ -105,7 +104,7 @@ export default function CommercialMaintenancePage() {
 
       <WhyGrid
         label="Why TIMCO"
-        heading="Why homeowners and property managers stick with us."
+        heading="Why property managers stick with us."
         items={[
           {
             title: 'Recurring, on the calendar',
@@ -136,26 +135,23 @@ export default function CommercialMaintenancePage() {
 
       <PhotoStrip
         label="Recent Work"
-        heading="Properties under our care."
+        heading="Commercial properties under our care."
         photos={[
-          { src: '/images/comm-after-white-home.jpg', alt: 'Residential property after TIMCO lawn care in Thibodaux' },
-          { src: '/images/comm-bobcat-apartments.jpg', alt: 'TIMCO Bobcat mowing apartment grounds' },
-          { src: '/images/comm-weed-eating.jpg', alt: 'TIMCO crew weed eating along property edge' },
-          { src: '/images/comm-2story-truck.jpg', alt: 'Maintained two-story residential home with TIMCO truck out front' },
-          { src: '/images/comm-after-truck.jpg', alt: 'TIMCO truck on a freshly mowed residential property' },
+          { src: '/images/comm-bobcat-apartments.jpg', alt: 'TIMCO Bobcat mowing apartment grounds in Thibodaux' },
           { src: '/images/comm-twelve-oaks.jpg', alt: 'HOA subdivision entrance maintained by TIMCO' },
-          { src: '/images/comm-after-mobile.jpg', alt: 'Mobile home property after TIMCO lawn care and clearing' },
           { src: '/images/comm-antebellum.jpg', alt: 'Large commercial building under oaks maintained by TIMCO' },
+          { src: '/images/comm-weed-eating.jpg', alt: 'TIMCO crew weed eating along a commercial property edge' },
           { src: '/images/comm-tree-work.jpg', alt: 'TIMCO truck loaded with cut tree branches from a maintenance job' },
+          { src: '/images/comm-truck-field.jpg', alt: 'TIMCO truck staged at a commercial grounds maintenance job' },
         ]}
       />
 
       <ServiceAreaBand cityPages={[]} />
 
       <ServiceCta
-        heading="Need a property on a schedule?"
-        body="Send the address, property type (residential or commercial), and the visit cadence you're looking for. We'll quote a recurring plan that keeps the place looking right every visit."
-        formNote="Insured · Reliable schedule · 7am–5pm, 7 days a week"
+        heading="Need a commercial property on a schedule?"
+        body="Send the address, property type (office, apartments, HOA), and the visit cadence you're looking for. We'll quote a recurring plan that keeps the grounds looking right every visit."
+        formNote="Insured · COI on request · Reliable schedule"
       />
     </>
   )

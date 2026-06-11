@@ -3,8 +3,8 @@ import ContactForm from '@/components/ContactForm'
 import { SITE } from '@/lib/site'
 
 export const metadata: Metadata = {
-  title: 'Contact TIMCO – Property Restoration & Retriever Training in Thibodaux, LA',
-  description: `Contact TIMCO for a free quote on property restoration, land management, commercial maintenance, or Labrador retriever training in Thibodaux, LA. Call ${SITE.phoneDisplay} or send a message.`,
+  title: 'Contact TIMCO – Property & Land Management in Thibodaux, LA',
+  description: `Contact TIMCO for a free quote on property restoration, residential or commercial property management, land restoration, or recreational land management in Thibodaux, LA. Call ${SITE.phoneDisplay} or send a message.`,
   openGraph: {
     title: `Contact ${SITE.name} | Thibodaux, LA`,
     description: `Request a free quote from TIMCO. Call ${SITE.phoneDisplay} or fill out the contact form.`,
@@ -18,7 +18,7 @@ const schema = {
   '@type': 'ContactPage',
   name: `Contact ${SITE.legalName}`,
   url: `${SITE.baseUrl}/contact`,
-  description: `Contact page for ${SITE.legalName}, a property restoration and retriever training company in ${SITE.address.city}, ${SITE.address.region}.`,
+  description: `Contact page for ${SITE.legalName}, a property and land management company in ${SITE.address.city}, ${SITE.address.region}.`,
   mainEntity: {
     '@type': 'LocalBusiness',
     name: SITE.legalName,
@@ -47,7 +47,7 @@ export default function ContactPage() {
             Tell {SITE.ownerShort} what you're dealing with.
           </h1>
           <p className="lede text-gray-300 mt-5 max-w-2xl">
-            Property that needs cleared, acreage that needs managed, a Lab that needs trained — send the details and Tim will follow up within a business day with a quote.
+            Property that needs cleared, a yard that needs a schedule, acreage that needs reclaimed — send the details and Tim will follow up within a business day with a quote.
           </p>
         </div>
       </section>
@@ -95,9 +95,9 @@ export default function ContactPage() {
               </div>
 
               <div className="border-l-4 border-accent pl-5">
-                <p className="text-xs font-bold uppercase tracking-mega text-gray-500">For Kennel Inquiries</p>
+                <p className="text-xs font-bold uppercase tracking-mega text-gray-500">Recurring Work</p>
                 <p className="text-sm text-gray-700 mt-2 leading-relaxed">
-                  Asking about board-and-train availability? Mention it in the message and Tim'll loop in current openings (10 runs, programs run 3–9 months).
+                  Looking for ongoing lawn or grounds maintenance? Mention your preferred cadence — weekly, bi-weekly, or monthly — and Tim will quote a recurring plan.
                 </p>
               </div>
             </aside>

@@ -15,9 +15,9 @@ const TITLE = 'Property Restoration'
 const SLUG = 'property-restoration'
 
 export const metadata: Metadata = {
-  title: 'Property Restoration in Thibodaux, LA – Overgrown Lots, Brush, Debris',
+  title: 'Property Restoration in Thibodaux, LA – Overgrown Homes & Businesses',
   description:
-    'TIMCO restores overgrown residential and commercial properties in Thibodaux, LA — brush clearing, tree work, trash and debris removal, complete site work. Insured. Call 985.665.7298.',
+    'TIMCO restores overgrown residential and commercial properties in Thibodaux, LA — brush clearing, tree work, trash and debris removal, complete site work around homes and buildings. Insured. Call 985.665.7298.',
   openGraph: {
     title: 'Property Restoration in Thibodaux, LA | TIMCO',
     description: 'Brush, debris, overgrowth — TIMCO restores neglected properties across Lafourche and Terrebonne.',
@@ -39,7 +39,7 @@ export default function PropertyRestorationPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
 
       <ServiceHero
-        label="Property & Land"
+        label="Property Management"
         title={
           <>
             Property restoration<br />in <span className="text-accent">Thibodaux, LA</span>.
@@ -49,12 +49,12 @@ export default function PropertyRestorationPage() {
           <>
             The lot that got away. The yard nobody's touched in five years. The
             commercial property that needs to be presentable by next month. TIMCO
-            specializes in pulling overgrown property back to usable — brush,
-            trees, trash, the whole site — in days, not weeks.
+            specializes in pulling overgrown homes and businesses back to usable —
+            brush, trees, trash, the whole site — in days, not weeks.
           </>
         }
-        image="/images/restoration-after-2.jpg"
-        imageAlt="Cleared rural lot under dramatic sky after TIMCO property restoration in Thibodaux, Louisiana"
+        image="/images/restoration-after-1.jpg"
+        imageAlt="Cleared residential lot after TIMCO property restoration in Thibodaux, Louisiana"
       />
 
       {/* Before / After */}
@@ -64,7 +64,7 @@ export default function PropertyRestorationPage() {
             <p className="section-label">Before & After</p>
             <h2 className="heading-xl text-primary mt-3 text-balance">From overgrown to usable.</h2>
             <p className="text-gray-700 mt-5 leading-relaxed">
-              Real lots in Lafourche and Terrebonne. Brush clearing, weed eating, debris removal, tree trimming — the work that turns a property nobody wants to look at into one ready for a build, a sale, or a fresh start.
+              Real homes and businesses in Lafourche and Terrebonne. Brush clearing, weed eating, debris removal, tree trimming — the work that turns a property nobody wants to look at into one ready for a sale, a tenant, or a fresh start. Got raw rural acreage instead? That&apos;s <a href="/services/land-restoration" className="text-accent underline underline-offset-2 hover:text-accent-dark">land restoration</a>.
             </p>
           </div>
 
@@ -77,7 +77,7 @@ export default function PropertyRestorationPage() {
             <BeforeAfter
               beforeSrc="/images/restoration-before-2.jpg"
               afterSrc="/images/restoration-after-2.jpg"
-              caption="Rural lot — bobcat clearing"
+              caption="Residential lot — full site cleanup"
             />
           </div>
         </div>

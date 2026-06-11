@@ -1,5 +1,5 @@
 import type { MetadataRoute } from 'next'
-import { SERVICES, CITY_PAGES, SITE } from '@/lib/site'
+import { SERVICES, BUCKETS, CITY_PAGES, SITE } from '@/lib/site'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = SITE.baseUrl
@@ -12,6 +12,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/contact`, lastModified: now, changeFrequency: 'yearly', priority: 0.8 },
     { url: `${base}/privacy`, lastModified: now, changeFrequency: 'yearly', priority: 0.3 },
   ]
+
+  const hubPages: MetadataRoute.Sitemap = BUCKETS.map((b) => ({
+    url: `${base}/services/${b.slug}`,
+    lastModified: now,
+    changeFrequency: 'monthly',
+    priority: 0.9,
+  }))
 
   const serviceDetails: MetadataRoute.Sitemap = SERVICES.map((s) => ({
     url: `${base}/services/${s.slug}`,
@@ -27,5 +34,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }))
 
-  return [...core, ...serviceDetails, ...cityPages]
+  return [...core, ...hubPages, ...serviceDetails, ...cityPages]
 }

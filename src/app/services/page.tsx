@@ -1,15 +1,15 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
-import { SERVICES, SITE } from '@/lib/site'
+import { SERVICES, BUCKETS, propertyServices, landServices, SITE } from '@/lib/site'
 
 export const metadata: Metadata = {
-  title: 'Services – Property Restoration, Land Management & Retriever Training',
+  title: 'Services – Property Management & Land Management in Thibodaux, LA',
   description:
-    'TIMCO services in Thibodaux, LA: property restoration, recreational land management, commercial property maintenance, and Labrador retriever training. Serving Lafourche, Terrebonne, and Assumption parishes.',
+    'TIMCO services in Thibodaux, LA: property restoration, residential and commercial property management, land restoration, and recreational land management. Serving Lafourche, Terrebonne, and Assumption parishes.',
   openGraph: {
     title: `TIMCO Services | Thibodaux, LA`,
-    description: 'Property restoration, land management, commercial maintenance, retriever training.',
+    description: 'Property restoration and management, land restoration and recreational land management.',
     url: `${SITE.baseUrl}/services`,
   },
   alternates: { canonical: `${SITE.baseUrl}/services` },
@@ -39,8 +39,8 @@ const schema = {
   })),
 }
 
-const propertyServices = SERVICES.filter((s) => !('division' in s))
-const kennelServices = SERVICES.filter((s) => 'division' in s)
+const propertyBucket = BUCKETS.find((b) => b.bucket === 'property')!
+const landBucket = BUCKETS.find((b) => b.bucket === 'land')!
 
 export default function ServicesPage() {
   return (
@@ -51,10 +51,10 @@ export default function ServicesPage() {
         <div className="container-wide py-20 md:py-28">
           <p className="section-label">Services</p>
           <h1 className="heading-xl text-white mt-3 max-w-3xl text-balance">
-            Four service lines. Run out of one Hwy&nbsp;308 headquarters.
+            Two divisions. Run out of one Hwy&nbsp;308 headquarters.
           </h1>
           <p className="lede text-gray-300 mt-6 max-w-2xl">
-            TIMCO has two sides: the property & land crew that handles weekly lawn care for residential and commercial customers, restores overgrown lots, and manages rural acreage — plus TIMCO Kennels, a 10-run Labrador retriever board-and-train.
+            TIMCO works two sides of the same business: property management — restoration and recurring care for homes and businesses — and land management — reclaiming and maintaining rural and recreational acreage.
           </p>
         </div>
       </section>
@@ -62,9 +62,10 @@ export default function ServicesPage() {
       <section className="section-padding bg-white" aria-labelledby="property-section">
         <div className="container-wide">
           <SectionTitle
-            label="Property & Land"
-            heading="Lawn care, restoration, and recreational land management."
-            body="Weekly mowing and maintenance for residential and commercial customers, overgrown-lot restoration when a property has gotten away, and rural acreage care for hunters and landholders."
+            label="Property Management"
+            href={`/services/${propertyBucket.slug}`}
+            heading="Restoration and recurring care for homes and businesses."
+            body={propertyBucket.lead}
           />
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 mt-12">
@@ -75,16 +76,17 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <section className="bg-gray-50 section-padding" aria-labelledby="kennels-section">
+      <section className="bg-gray-50 section-padding" aria-labelledby="land-section">
         <div className="container-wide">
           <SectionTitle
-            label="TIMCO Kennels"
-            heading="Labrador retriever board-and-train."
-            body="10 runs at the same HQ. Programs run 3 to 9 months, from basic obedience through advanced retriever (hand signals, duck blind etiquette)."
+            label="Land Management"
+            href={`/services/${landBucket.slug}`}
+            heading="Reclaiming and maintaining rural acreage."
+            body={landBucket.lead}
           />
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 mt-12 max-w-4xl">
-            {kennelServices.map((s) => (
+            {landServices.map((s) => (
               <ServiceCard key={s.slug} {...s} />
             ))}
           </div>
@@ -112,11 +114,17 @@ export default function ServicesPage() {
   )
 }
 
-function SectionTitle({ label, heading, body }: { label: string; heading: string; body: string }) {
+function SectionTitle({ label, href, heading, body }: { label: string; href?: string; heading: string; body: string }) {
   return (
     <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
       <div className="max-w-xl">
-        <p className="section-label" dangerouslySetInnerHTML={{ __html: label }} />
+        {href ? (
+          <Link href={href} className="section-label text-accent hover:text-accent-dark inline-block">
+            {label} →
+          </Link>
+        ) : (
+          <p className="section-label">{label}</p>
+        )}
         <h2 className="heading-xl text-primary mt-3 text-balance">{heading}</h2>
       </div>
       <p className="text-gray-600 max-w-md leading-relaxed">{body}</p>

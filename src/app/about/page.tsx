@@ -5,10 +5,10 @@ import { SITE } from '@/lib/site'
 
 export const metadata: Metadata = {
   title: `About TIMCO – Meet ${SITE.owner}`,
-  description: `${SITE.legalName} is owned and operated by ${SITE.owner} out of Thibodaux, Louisiana. Property restoration, land management, and a Labrador retriever kennel from one Hwy 308 headquarters.`,
+  description: `${SITE.legalName} is owned and operated by ${SITE.owner} out of Thibodaux, Louisiana. Property restoration, property management, and land management from one Hwy 308 headquarters.`,
   openGraph: {
     title: `About ${SITE.name} | Thibodaux, LA`,
-    description: `Meet ${SITE.owner}, owner of ${SITE.name} — lawn care, property restoration, land management, and Labrador retriever training from Thibodaux, Louisiana.`,
+    description: `Meet ${SITE.owner}, owner of ${SITE.name} — property restoration, residential and commercial property management, and land management from Thibodaux, Louisiana.`,
     url: `${SITE.baseUrl}/about`,
   },
   alternates: { canonical: `${SITE.baseUrl}/about` },
@@ -68,9 +68,9 @@ export default function AboutPage() {
             One operator. One headquarters.<br />Built in {SITE.address.city}.
           </h1>
           <p className="lede text-gray-300 mt-6 max-w-2xl">
-            TIMCO is a lawn care, property maintenance, restoration, and land management operation —
-            run by {SITE.owner} out of {SITE.address.street}, {SITE.address.city}. The same
-            building houses the equipment shed and the 10-run Labrador retriever kennel.
+            TIMCO is a property restoration, property management, and land management operation —
+            run by {SITE.owner} out of {SITE.address.street}, {SITE.address.city}. One equipment yard,
+            one crew, two sides of the same business.
           </p>
         </div>
       </section>
@@ -113,16 +113,10 @@ export default function AboutPage() {
                   touched in years and handing it back usable.
                 </p>
                 <p>
-                  That same philosophy runs the rural side: cutting, spraying, drainage, prescribed
-                  burns, and tree clearing for landowners with recreational acreage in Lafourche,
-                  Terrebonne, and Assumption parishes.
-                </p>
-                <p>
-                  And it runs <strong className="text-primary">TIMCO Kennels</strong>, the
-                  10-run Labrador retriever board-and-train at the same HQ. One dedicated in-house
-                  trainer runs each dog through the program — three to nine months,
-                  from basic obedience all the way to advanced retriever work (hand signals,
-                  duck blind etiquette, the things a serious gun-dog owner needs).
+                  That same philosophy runs the rural side — TIMCO&apos;s <strong className="text-primary">land
+                  management</strong> division: large-scale land restoration that reclaims overgrown
+                  acreage, plus cutting, spraying, drainage, prescribed burns, and tree clearing for
+                  landowners with recreational ground in Lafourche, Terrebonne, and Assumption parishes.
                 </p>
               </div>
 
@@ -146,16 +140,16 @@ export default function AboutPage() {
               {SITE.address.street}, {SITE.address.city}
             </h2>
             <p className="text-gray-600 mt-4 leading-relaxed">
-              One building, three operations. Equipment shed for the property crew, kennel runs for the Labs, office for Tim.
+              One yard, one crew, the equipment to handle both sides of the work — property and land — across the Bayou Region.
             </p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-            <HqShot src="/images/about-equipment-fleet.jpg" alt="TIMCO equipment fleet at the Hwy 308 headquarters in Thibodaux" />
-            <HqShot src="/images/kennel-facility.jpg" alt="TIMCO Kennels facility at the Thibodaux headquarters" />
-            <HqShot src="/images/comm-equipment-shed.jpg" alt="TIMCO equipment shed with bobcat and utility trailer in Thibodaux" />
-            <HqShot src="/images/about-brand-hat.jpg" alt="TIMCO Kennels branded hat" />
-            <HqShot src="/images/about-trainer-dog.jpg" alt="TIMCO Kennels trainer working a Labrador retriever in the field" />
-            <HqShot src="/images/atmosphere-cabin-night.jpg" alt="TIMCO Hwy 308 headquarters at night" />
+            <HqShot src="/images/about-equipment-fleet.jpg" alt="TIMCO equipment fleet — weed eaters and blowers — at the Hwy 308 headquarters in Thibodaux" />
+            <HqShot src="/images/comm-equipment-shed.jpg" alt="TIMCO bobcat loader and utility trailer at the Thibodaux headquarters" />
+            <HqShot src="/images/restoration-bobcat-2.jpg" alt="TIMCO bobcat clearing open rural acreage near Thibodaux" />
+            <HqShot src="/images/land-pasture.jpg" alt="Open rural pasture managed by TIMCO in the Bayou Region" />
+            <HqShot src="/images/comm-truck-field.jpg" alt="TIMCO truck staged at the edge of a property in Lafourche Parish" />
+            <HqShot src="/images/atmosphere-cabin-night.jpg" alt="Rural property lit up at dusk in the TIMCO service area" />
           </div>
         </div>
       </section>

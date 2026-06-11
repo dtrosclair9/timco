@@ -21,20 +21,20 @@ const oswald = Oswald({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.baseUrl),
   title: {
-    default: `${SITE.name} | Property Restoration & Retriever Training in Thibodaux, LA`,
+    default: `${SITE.name} | Property & Land Management in Thibodaux, LA`,
     template: `%s | ${SITE.name}`,
   },
   description:
-    'TIMCO restores overgrown properties and trains Labrador retrievers in Thibodaux, LA. Land management, commercial maintenance, board-and-train kennel. Serving Lafourche and Terrebonne parishes.',
+    'TIMCO handles property restoration, residential and commercial property management, land restoration, and recreational land management in Thibodaux, LA. Insured. Serving Lafourche, Terrebonne, and Assumption parishes.',
   keywords: [
     'property restoration Thibodaux',
-    'land clearing Thibodaux LA',
+    'property management Thibodaux LA',
+    'residential property management Louisiana',
+    'commercial property management Thibodaux',
+    'land restoration Louisiana',
     'recreational land management Louisiana',
-    'commercial property maintenance Thibodaux',
-    'retriever training Thibodaux',
-    'Labrador board and train Louisiana',
+    'land clearing Thibodaux LA',
     'TIMCO',
-    'TIMCO Kennels',
     'Lafourche Parish land services',
   ],
   authors: [{ name: SITE.legalName }],

@@ -13,7 +13,7 @@ const data: CityPageData = {
     imageAlt: 'Property restored to manicured residential lawn in Thibodaux, Louisiana by TIMCO',
   },
   intro:
-    'TIMCO is a Thibodaux-based property restoration crew working out of 619 Hwy 308. Overgrown residential lots, neglected rural property, post-tenant commercial cleanups — we clear it, haul it, and leave it usable.',
+    'TIMCO is a Thibodaux-based property restoration crew working out of 619 Hwy 308. Overgrown residential lots, neglected yards, post-tenant commercial cleanups — we clear it, haul it, and leave it usable. (Raw rural acreage is handled by our land restoration crew.)',
   highlights: [
     'Brush clearing & weed eating',
     'Tree trimming & selective removal',
@@ -69,13 +69,13 @@ const data: CityPageData = {
     { src: '/images/restoration-after-1.jpg', alt: 'Cleared residential lot in Thibodaux after TIMCO restoration' },
     { src: '/images/restoration-bobcat-1.jpg', alt: 'TIMCO Bobcat clearing tall brush in Thibodaux' },
     { src: '/images/restoration-bobcat-2.jpg', alt: 'TIMCO Bobcat parked in cleared field outside Thibodaux' },
-    { src: '/images/restoration-farmhouse.jpg', alt: 'TIMCO crew working on a rural farmhouse property near Thibodaux' },
-    { src: '/images/restoration-rural.jpg', alt: 'Rural Lafourche Parish property cleared by TIMCO' },
+    { src: '/images/restoration-farmhouse.jpg', alt: 'TIMCO crew cleaning up an old farmhouse property near Thibodaux' },
+    { src: '/images/comm-after-white-home.jpg', alt: 'Restored residential property with a freshly mowed lawn in Thibodaux' },
   ],
   relatedCityPages: [
     { href: '/services/property-restoration-houma-la', label: 'Property Restoration in Houma' },
     { href: '/services/recreational-land-management-thibodaux-la', label: 'Land Management in Thibodaux' },
-    { href: '/services/retriever-training-thibodaux-la', label: 'Retriever Training in Thibodaux' },
+    { href: '/services/recreational-land-management-houma-la', label: 'Land Management in Houma' },
   ],
 }
 

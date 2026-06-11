@@ -27,7 +27,7 @@ const data: CityPageData = {
   localContext: [
     {
       heading: 'Hunter-minded crew',
-      body: "TIMCO also runs a Labrador retriever kennel out of the same HQ, so we think about rural ground the way an owner does — shooting lanes that actually clear, fields that hold cover, drainage that doesn't trap a truck come November.",
+      body: "Tim hunts and works rural ground himself, so we think about your land the way an owner does — shooting lanes that actually clear, fields that hold cover, drainage that doesn't trap a truck come November.",
     },
     {
       heading: 'Lafourche-area access',
@@ -65,20 +65,20 @@ const data: CityPageData = {
     },
   ],
   photos: [
-    { src: '/images/land-hero.jpg', alt: 'Rustic barn with horses on managed Lafourche Parish acreage' },
-    { src: '/images/land-pine.jpg', alt: 'Lone pine in pasture on TIMCO-managed Thibodaux-area land' },
-    { src: '/images/land-deer-stand.jpg', alt: 'Deer stand by pond on managed Lafourche recreational property' },
+    { src: '/images/land-hero.jpg', alt: 'Dogs running past an old barn on managed Lafourche Parish acreage' },
+    { src: '/images/land-pine.jpg', alt: 'Lone pine in a mowed field on TIMCO-managed Thibodaux-area land' },
+    { src: '/images/land-deer-stand.jpg', alt: 'Wooded canal with footbridge and feeders on a managed Lafourche property' },
     { src: '/images/land-burn-day.jpg', alt: 'Controlled brush pile burn near Thibodaux for land management' },
-    { src: '/images/land-burn-night.jpg', alt: 'Nighttime brush pile burn on Thibodaux-area land' },
-    { src: '/images/land-cypress.jpg', alt: 'Cypress swamp with cleared duck blind setup in Lafourche' },
-    { src: '/images/land-bayou-dock-1.jpg', alt: 'Boat dock on bayou near Thibodaux recreational property' },
-    { src: '/images/land-camp-dock.jpg', alt: 'TIMCO hunting camp boat dock in Lafourche Parish' },
+    { src: '/images/land-burn-night.jpg', alt: 'Campfire at dusk among cypress on Thibodaux-area land' },
+    { src: '/images/land-cypress.jpg', alt: 'Cypress trees along a bayou bank on Lafourche recreational land' },
+    { src: '/images/land-bayou-dock-1.jpg', alt: 'Concrete dock and piling on a bayou near a Thibodaux recreational property' },
+    { src: '/images/land-camp-dock.jpg', alt: 'Jon boat at a covered camp dock in Lafourche Parish' },
     { src: '/images/land-pasture.jpg', alt: 'Open rural pasture managed by TIMCO outside Thibodaux' },
   ],
   relatedCityPages: [
     { href: '/services/recreational-land-management-houma-la', label: 'Land Management in Houma' },
     { href: '/services/property-restoration-thibodaux-la', label: 'Property Restoration in Thibodaux' },
-    { href: '/services/retriever-training-thibodaux-la', label: 'Retriever Training in Thibodaux' },
+    { href: '/services/property-restoration-houma-la', label: 'Property Restoration in Houma' },
   ],
 }
 

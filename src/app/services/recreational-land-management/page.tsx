@@ -37,7 +37,7 @@ export default function RecreationalLandPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
 
       <ServiceHero
-        label="Property & Land"
+        label="Land Management"
         title={
           <>
             Recreational land<br />
@@ -53,7 +53,7 @@ export default function RecreationalLandPage() {
           </>
         }
         image="/images/land-hero.jpg"
-        imageAlt="TIMCO recreational land management — rustic barn and pasture on a hunting property in Louisiana"
+        imageAlt="Dogs running past an old tin-roof barn on managed recreational acreage in Louisiana"
       />
 
       <IncludedList
@@ -80,7 +80,7 @@ export default function RecreationalLandPage() {
         items={[
           {
             title: "Hunter's perspective",
-            body: "Tim runs TIMCO Kennels too — he gets why your land matters. We manage it like somebody who actually hunts and trains on rural property, not just a vendor running a mower.",
+            body: "Tim hunts and works rural ground himself — he gets why your land matters. We manage it like somebody who actually uses recreational property, not just a vendor running a mower.",
           },
           {
             title: 'Prescribed burns done right',
@@ -109,15 +109,15 @@ export default function RecreationalLandPage() {
         label="Recent Work"
         heading="The look of land that's being managed."
         photos={[
-          { src: '/images/land-hero.jpg', alt: 'Rustic barn with horses on managed recreational acreage' },
-          { src: '/images/land-burn-day.jpg', alt: 'Controlled brush pile burn for land management' },
-          { src: '/images/land-burn-night.jpg', alt: 'Nighttime brush pile burn on managed acreage' },
-          { src: '/images/land-deer-stand.jpg', alt: 'Deer stand by pond on a managed recreational property' },
-          { src: '/images/land-cypress.jpg', alt: 'Cypress swamp with cleared duck blind setup' },
-          { src: '/images/land-pine.jpg', alt: 'Lone pine in vast green pasture on managed land' },
-          { src: '/images/land-bayou-dock-1.jpg', alt: 'Boat dock on bayou serving a recreational property' },
-          { src: '/images/land-bayou-dock-2.jpg', alt: 'Boat tied at dock under cypress on managed acreage' },
-          { src: '/images/land-camp-dock.jpg', alt: 'TIMCO hunting camp boat dock on recreational property' },
+          { src: '/images/land-hero.jpg', alt: 'Dogs running past an old barn on managed recreational acreage' },
+          { src: '/images/land-burn-day.jpg', alt: 'Controlled brush pile burn by a pond for land management' },
+          { src: '/images/land-burn-night.jpg', alt: 'Campfire at dusk among cypress on managed acreage' },
+          { src: '/images/land-deer-stand.jpg', alt: 'Wooded canal with footbridge and feeders on a recreational property' },
+          { src: '/images/land-cypress.jpg', alt: 'Cypress trees along a bayou bank on recreational land' },
+          { src: '/images/land-pine.jpg', alt: 'Lone pine in a mowed field on managed land' },
+          { src: '/images/land-bayou-dock-1.jpg', alt: 'Concrete dock and piling on a calm bayou serving a recreational property' },
+          { src: '/images/land-bayou-dock-2.jpg', alt: 'Wooden dock and jon boat on a wooded bayou' },
+          { src: '/images/land-camp-dock.jpg', alt: 'Jon boat at a covered camp dock on a canal' },
         ]}
       />
 

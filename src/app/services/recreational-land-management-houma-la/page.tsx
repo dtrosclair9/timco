@@ -31,7 +31,7 @@ const data: CityPageData = {
     },
     {
       heading: 'Hunter-minded crew',
-      body: 'TIMCO also runs a Labrador retriever kennel out of the same HQ, so we think about your hunting property the way an owner does — shooting lanes that actually clear, blind access that actually works, food plots that actually feed.',
+      body: 'Tim hunts and works rural ground himself, so we think about your hunting property the way an owner does — shooting lanes that actually clear, blind access that actually works, food plots that actually feed.',
     },
     {
       heading: 'Equipment for Houma access',
@@ -65,15 +65,15 @@ const data: CityPageData = {
     },
   ],
   photos: [
-    { src: '/images/land-cypress.jpg', alt: 'Cypress swamp with cleared duck blind setup in Terrebonne' },
-    { src: '/images/land-deer-stand.jpg', alt: 'Deer stand by pond on Terrebonne recreational property' },
-    { src: '/images/land-bayou-dock-1.jpg', alt: 'Boat dock on bayou serving a Houma-area hunting property' },
-    { src: '/images/land-bayou-dock-2.jpg', alt: 'Boat tied at dock under cypress on managed Terrebonne acreage' },
-    { src: '/images/land-camp-dock.jpg', alt: 'Hunting camp boat dock on a Terrebonne property managed by TIMCO' },
+    { src: '/images/land-cypress.jpg', alt: 'Cypress trees along a bayou bank on Terrebonne recreational land' },
+    { src: '/images/land-deer-stand.jpg', alt: 'Wooded canal with footbridge and feeders on a Terrebonne property' },
+    { src: '/images/land-bayou-dock-1.jpg', alt: 'Concrete dock and piling on a bayou serving a Houma-area hunting property' },
+    { src: '/images/land-bayou-dock-2.jpg', alt: 'Wooden dock and jon boat on a wooded bayou in Terrebonne' },
+    { src: '/images/land-camp-dock.jpg', alt: 'Jon boat at a covered camp dock on a Terrebonne canal' },
     { src: '/images/land-burn-day.jpg', alt: 'Controlled pile burn on Terrebonne recreational land' },
-    { src: '/images/land-pine.jpg', alt: 'Lone pine in vast pasture on a Houma-area property' },
+    { src: '/images/land-pine.jpg', alt: 'Lone pine in a mowed field on a Houma-area property' },
     { src: '/images/land-pasture.jpg', alt: 'Open managed pasture on a Terrebonne recreational property' },
-    { src: '/images/land-hero.jpg', alt: 'Barn with horses on a managed Houma-area property' },
+    { src: '/images/land-hero.jpg', alt: 'Dogs running past an old barn on a managed Houma-area property' },
   ],
   relatedCityPages: [
     { href: '/services/recreational-land-management-thibodaux-la', label: 'Land Management in Thibodaux' },
