@@ -52,8 +52,8 @@ export default function RecreationalLandPage() {
             Region — by boat or on foot, boots and chainsaws.
           </>
         }
-        image="/images/land-hero.jpg"
-        imageAlt="Dogs running past an old tin-roof barn on managed recreational acreage in Louisiana"
+        image="/images/land-canal-cypress.jpg"
+        imageAlt="A cypress-lined canal cleared and opened back up by TIMCO in the Louisiana Bayou Region"
       />
 
       <IncludedList
@@ -71,8 +71,8 @@ export default function RecreationalLandPage() {
           'Prescribed brush burns &amp; pile burns',
           'Access road grading &amp; food plot prep',
         ]}
-        image="/images/land-burn-day.jpg"
-        imageAlt="TIMCO controlled brush pile burn for recreational land management in Louisiana"
+        image="/images/land-ditch-clearing.jpg"
+        imageAlt="TIMCO crew clearing a ditch bank with equipment to open up drainage in the Bayou Region"
       />
 
       <WhyGrid
@@ -110,15 +110,14 @@ export default function RecreationalLandPage() {
         label="Recent Work"
         heading="The look of land that's being managed."
         photos={[
-          { src: '/images/land-hero.jpg', alt: 'Dogs running past an old barn on managed recreational acreage' },
-          { src: '/images/land-burn-day.jpg', alt: 'Controlled brush pile burn by a pond for land management' },
-          { src: '/images/land-burn-night.jpg', alt: 'Campfire at dusk among cypress on managed acreage' },
-          { src: '/images/land-deer-stand.jpg', alt: 'Wooded canal with footbridge and feeders on recreational land' },
-          { src: '/images/land-cypress.jpg', alt: 'Cypress trees along a bayou bank on recreational land' },
+          { src: '/images/land-field-road.jpg', alt: 'Lush managed field with a grass turn-row in the Bayou Region' },
+          { src: '/images/land-burn-field.jpg', alt: 'TIMCO controlled brush burn in an open field' },
           { src: '/images/land-pine.jpg', alt: 'Lone pine in a mowed field on managed land' },
+          { src: '/images/land-burn-night.jpg', alt: 'Campfire at dusk among cypress on managed acreage' },
+          { src: '/images/land-marsh.jpg', alt: 'Flooded marsh and treeline on recreational ground in Louisiana' },
+          { src: '/images/land-deer-stand.jpg', alt: 'Wooded canal with footbridge and feeders on recreational land' },
           { src: '/images/land-bayou-dock-1.jpg', alt: 'Concrete dock and piling on a calm bayou serving recreational land' },
-          { src: '/images/land-bayou-dock-2.jpg', alt: 'Wooden dock and jon boat on a wooded bayou' },
-          { src: '/images/land-camp-dock.jpg', alt: 'Jon boat at a covered camp dock on a canal' },
+          { src: '/images/land-field-cleared.jpg', alt: 'A freshly cleared field after TIMCO land reclamation' },
         ]}
       />
 

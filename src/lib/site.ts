@@ -44,7 +44,7 @@ export const SERVICES = [
     short: 'Reclaim an overgrown yard, then keep it sharp.',
     lead: 'Bring a neglected home lot back and keep it that way — brush clearing, debris and trash removal, and full cleanup, then recurring lawn and grounds care. Restore once, manage from there.',
     icon: 'residential',
-    image: '/images/comm-after-white-home.jpg',
+    image: '/images/res-home-modern.jpg',
   },
   {
     slug: 'commercial-land-management',
@@ -60,7 +60,7 @@ export const SERVICES = [
     short: 'Reclaim and manage rural and hunting acreage.',
     lead: 'Reclaim overgrown rural land, then keep it productive — clearing, cutting, spraying, prescribed burns, tree work, and opening up canals, bayous, and right-of-ways so they drain again. Hunting ground kept accessible season after season.',
     icon: 'land',
-    image: '/images/land-pine.jpg',
+    image: '/images/land-field-road.jpg',
   },
 ] as const
 

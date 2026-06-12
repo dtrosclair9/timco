@@ -52,8 +52,8 @@ export default function ResidentialLandManagementPage() {
             home every weekend or away for the season.
           </>
         }
-        image="/images/comm-after-white-home.jpg"
-        imageAlt="Home with a freshly mowed lawn — TIMCO residential land management in Thibodaux, LA"
+        image="/images/res-home-modern.jpg"
+        imageAlt="Modern farmhouse with a manicured lawn — TIMCO residential land management in Thibodaux, LA"
       />
 
       <IncludedList
@@ -70,8 +70,8 @@ export default function ResidentialLandManagementPage() {
           'Tree &amp; shrub trimming',
           'Recurring weekly, bi-weekly, or monthly visits',
         ]}
-        image="/images/comm-weed-eating.jpg"
-        imageAlt="TIMCO crew member weed eating along a home's edge in Thibodaux, LA"
+        image="/images/res-mower-home.jpg"
+        imageAlt="TIMCO zero-turn mower on a residential lawn in Thibodaux, LA"
       />
 
       <WhyGrid

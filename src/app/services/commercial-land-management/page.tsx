@@ -137,12 +137,12 @@ export default function CommercialLandManagementPage() {
         label="Recent Work"
         heading="Commercial grounds under our care."
         photos={[
-          { src: '/images/comm-bobcat-apartments.jpg', alt: 'TIMCO Bobcat mowing apartment grounds in Thibodaux' },
-          { src: '/images/comm-twelve-oaks.jpg', alt: 'HOA subdivision entrance maintained by TIMCO' },
           { src: '/images/comm-antebellum.jpg', alt: 'Large commercial building under oaks maintained by TIMCO' },
-          { src: '/images/comm-weed-eating.jpg', alt: 'TIMCO crew weed eating along a commercial grounds edge' },
           { src: '/images/comm-tree-work.jpg', alt: 'TIMCO truck loaded with cut tree branches from a maintenance job' },
           { src: '/images/comm-truck-field.jpg', alt: 'TIMCO truck staged at a commercial grounds maintenance job' },
+          { src: '/images/comm-equipment-shed.jpg', alt: 'TIMCO Bobcat loader and trailer staged for a commercial job' },
+          { src: '/images/comm-weed-eating.jpg', alt: 'TIMCO crew weed eating along a commercial grounds edge' },
+          { src: '/images/comm-2story-truck.jpg', alt: 'Two-story commercial building with grounds maintained by TIMCO' },
         ]}
       />
 

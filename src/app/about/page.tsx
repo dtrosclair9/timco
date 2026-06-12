@@ -146,7 +146,7 @@ export default function AboutPage() {
             <HqShot src="/images/comm-equipment-shed.jpg" alt="TIMCO bobcat loader and utility trailer at the Thibodaux headquarters" />
             <HqShot src="/images/restoration-bobcat-2.jpg" alt="TIMCO bobcat clearing open rural acreage near Thibodaux" />
             <HqShot src="/images/land-pasture.jpg" alt="Open rural pasture managed by TIMCO in the Bayou Region" />
-            <HqShot src="/images/comm-truck-field.jpg" alt="TIMCO truck staged at the edge of a job in Lafourche Parish" />
+            <HqShot src="/images/about-tim-crew.jpg" alt={`${SITE.owner} and crew on managed land at sunset in the Bayou Region`} />
             <HqShot src="/images/atmosphere-cabin-night.jpg" alt="Rural land lit up at dusk in the TIMCO service area" />
           </div>
         </div>

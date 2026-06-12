@@ -65,7 +65,7 @@ const data: CityPageData = {
     },
   ],
   photos: [
-    { src: '/images/comm-after-white-home.jpg', alt: 'White home with a freshly mowed lawn maintained by TIMCO in Thibodaux' },
+    { src: '/images/res-mower-home.jpg', alt: 'TIMCO zero-turn mower on a residential lawn in Thibodaux' },
     { src: '/images/comm-after-truck.jpg', alt: 'Maintained home with a cleared yard and TIMCO truck in Lafourche Parish' },
     { src: '/images/comm-2story-truck.jpg', alt: 'Two-story Thibodaux home with a manicured lawn maintained by TIMCO' },
     { src: '/images/comm-after-mobile.jpg', alt: 'Single-story home with a neatly mowed lawn in Thibodaux' },

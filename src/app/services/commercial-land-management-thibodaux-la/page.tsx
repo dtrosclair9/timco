@@ -65,7 +65,7 @@ const data: CityPageData = {
     },
   ],
   photos: [
-    { src: '/images/comm-bobcat-apartments.jpg', alt: 'TIMCO Bobcat mowing apartment grounds in Thibodaux' },
+    { src: '/images/comm-equipment-shed.jpg', alt: 'TIMCO Bobcat loader and trailer staged for a commercial job near Thibodaux' },
     { src: '/images/comm-twelve-oaks.jpg', alt: 'HOA subdivision entrance maintained by TIMCO near Thibodaux' },
     { src: '/images/comm-antebellum.jpg', alt: 'Large commercial building under oaks maintained by TIMCO in Lafourche Parish' },
     { src: '/images/comm-weed-eating.jpg', alt: 'TIMCO crew weed eating along a commercial grounds edge in Thibodaux' },
