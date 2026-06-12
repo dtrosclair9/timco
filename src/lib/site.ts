@@ -6,7 +6,7 @@ export const SITE = {
   legalName: 'TIMCO LLC',
   tagline: 'Property & Land Management, Restoration & Maintenance in Thibodaux, LA',
   baseUrl: 'https://timcola.com', // TODO: confirm domain spelling before launch
-  owner: 'Timothy Cailouet',
+  owner: 'Timothy Caillouet',
   ownerShort: 'Tim',
   ownerTitle: 'Owner / Operator',
   phoneDisplay: '985.665.7298',
