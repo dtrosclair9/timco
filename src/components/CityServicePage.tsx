@@ -183,7 +183,7 @@ export function CityServiceLayout(d: CityPageData) {
                 {d.service.toLowerCase()} across the Bayou Region.
               </h2>
             </div>
-            <p className="text-gray-600 max-w-sm text-sm">Real properties, real crews. Insured.</p>
+            <p className="text-gray-600 max-w-sm text-sm">Real land, real crews. Insured.</p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
             {d.photos.map((p) => (
@@ -256,10 +256,10 @@ export function CityServiceLayout(d: CityPageData) {
             <div>
               <p className="section-label">Get a {d.city} Quote</p>
               <h2 className="heading-xl text-primary mt-3 text-balance">
-                Property in {d.city} that needs work?
+                Land in {d.city} that needs work?
               </h2>
               <p className="text-gray-700 mt-5 leading-relaxed">
-                Send the address and a few photos. Tim will drive out, walk the property, and give you an honest number — usually within a business day.
+                Send the address and a few photos. Tim will drive out, walk the land, and give you an honest number — usually within a business day.
               </p>
             </div>
             <div className="flex flex-col gap-3">

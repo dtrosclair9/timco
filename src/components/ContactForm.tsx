@@ -77,7 +77,7 @@ export default function ContactForm({ defaultService }: { defaultService?: strin
           required
           rows={5}
           className="w-full border border-gray-300 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition resize-y"
-          placeholder="Property type, location, what needs to happen, timeline..."
+          placeholder="Type of land, location, what needs to happen, timeline..."
         />
       </div>
 

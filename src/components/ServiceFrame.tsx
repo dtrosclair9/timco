@@ -119,7 +119,7 @@ export function PhotoStrip({ label, heading, photos }: { label: string; heading:
             <h2 className="heading-lg text-primary mt-3 text-balance max-w-lg">{heading}</h2>
           </div>
           <p className="text-gray-600 max-w-sm text-sm">
-            Real jobs. Real properties. {SITE.serviceArea.parishes.join(', ')} parishes.
+            Real jobs. Real land. {SITE.serviceArea.parishes.join(', ')} parishes.
           </p>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-3">

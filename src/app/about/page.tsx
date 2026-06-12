@@ -5,10 +5,10 @@ import { SITE } from '@/lib/site'
 
 export const metadata: Metadata = {
   title: `About TIMCO – Meet ${SITE.owner}`,
-  description: `${SITE.legalName} is owned and operated by ${SITE.owner} out of Thibodaux, Louisiana. Property restoration, property management, and land management from one Hwy 308 headquarters.`,
+  description: `${SITE.legalName} is owned and operated by ${SITE.owner} out of Thibodaux, Louisiana. A land management company — restoring and managing residential, commercial, and recreational land from one Hwy 308 headquarters.`,
   openGraph: {
     title: `About ${SITE.name} | Thibodaux, LA`,
-    description: `Meet ${SITE.owner}, owner of ${SITE.name} — property restoration, residential and commercial property management, and land management from Thibodaux, Louisiana.`,
+    description: `Meet ${SITE.owner}, owner of ${SITE.name} — land restoration and management, residential, commercial, and recreational, from Thibodaux, Louisiana.`,
     url: `${SITE.baseUrl}/about`,
   },
   alternates: { canonical: `${SITE.baseUrl}/about` },
@@ -47,7 +47,7 @@ const values = [
   },
   {
     title: 'Honest Scope',
-    body: "We walk the property, listen, and put an honest number on it. If a job isn't right for us, we tell you. We don't sell installs we don't do.",
+    body: "We walk the land, listen, and put an honest number on it. If a job isn't right for us, we tell you. We don't sell installs we don't do.",
   },
   {
     title: 'Local, Insured, Accountable',
@@ -65,12 +65,12 @@ export default function AboutPage() {
         <div className="container-wide py-20 md:py-28">
           <p className="section-label">About</p>
           <h1 className="heading-xl text-white mt-3 max-w-3xl text-balance">
-            One operator. One headquarters.<br />Built in {SITE.address.city}.
+            A land manager,<br />through and through.
           </h1>
           <p className="lede text-gray-300 mt-6 max-w-2xl">
-            TIMCO is a property restoration, property management, and land management operation —
-            run by {SITE.owner} out of {SITE.address.street}, {SITE.address.city}. One equipment yard,
-            one crew, two sides of the same business.
+            TIMCO is a land management company — restoring and managing residential, commercial, and
+            recreational land, run by {SITE.owner} out of {SITE.address.street}, {SITE.address.city}.
+            One equipment yard, one crew, one standard.
           </p>
         </div>
       </section>
@@ -101,22 +101,20 @@ export default function AboutPage() {
               <div className="mt-6 space-y-5 text-gray-700 leading-relaxed">
                 <p>
                   {SITE.owner} started <strong className="text-primary">{SITE.legalName}</strong> in {SITE.established} on
-                  the bread-and-butter work most homeowners and property managers need every
-                  week — lawn care, grass cutting, weed eating, spraying, trimming, and cleanup
-                  for residential and commercial properties across the Bayou Region. That recurring
-                  maintenance is still the heart of the business.
+                  the bread-and-butter work land needs every week — grass cutting, weed eating, spraying,
+                  trimming, drainage, and cleanup for homes, businesses, and rural acreage across the
+                  Bayou Region. That recurring management is the steady heart of the business.
                 </p>
                 <p>
-                  Alongside it, TIMCO took on the lots most contractors skip &mdash; the overgrown
-                  yards, the trash-filled properties, the brush nobody wanted to touch. The word
-                  Tim keeps coming back to is <em>restoration</em>: taking a property nobody&apos;s
-                  touched in years and handing it back usable.
+                  And it&apos;s built on the jobs most contractors skip — the overgrown yards, the
+                  grown-over lots, the brush nobody wanted to touch. The word Tim keeps coming back to is
+                  <em> restoration</em>: taking land nobody&apos;s touched in years and handing it back usable.
                 </p>
                 <p>
-                  That same philosophy runs the rural side — TIMCO&apos;s <strong className="text-primary">land
-                  management</strong> division: large-scale land restoration that reclaims overgrown
-                  acreage, plus cutting, spraying, drainage, prescribed burns, and tree clearing for
-                  landowners with recreational ground in Lafourche, Terrebonne, and Assumption parishes.
+                  That&apos;s the whole company in one line — <strong className="text-primary">we restore and
+                  manage land</strong>. Residential yards, commercial grounds, and recreational acreage
+                  across Lafourche, Terrebonne, and Assumption parishes. Land management is the passion;
+                  everything else follows from it.
                 </p>
               </div>
 
@@ -140,7 +138,7 @@ export default function AboutPage() {
               {SITE.address.street}, {SITE.address.city}
             </h2>
             <p className="text-gray-600 mt-4 leading-relaxed">
-              One yard, one crew, the equipment to handle both sides of the work — property and land — across the Bayou Region.
+              One yard, one crew, the equipment to handle every kind of land — residential, commercial, and recreational — across the Bayou Region.
             </p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
@@ -148,8 +146,8 @@ export default function AboutPage() {
             <HqShot src="/images/comm-equipment-shed.jpg" alt="TIMCO bobcat loader and utility trailer at the Thibodaux headquarters" />
             <HqShot src="/images/restoration-bobcat-2.jpg" alt="TIMCO bobcat clearing open rural acreage near Thibodaux" />
             <HqShot src="/images/land-pasture.jpg" alt="Open rural pasture managed by TIMCO in the Bayou Region" />
-            <HqShot src="/images/comm-truck-field.jpg" alt="TIMCO truck staged at the edge of a property in Lafourche Parish" />
-            <HqShot src="/images/atmosphere-cabin-night.jpg" alt="Rural property lit up at dusk in the TIMCO service area" />
+            <HqShot src="/images/comm-truck-field.jpg" alt="TIMCO truck staged at the edge of a job in Lafourche Parish" />
+            <HqShot src="/images/atmosphere-cabin-night.jpg" alt="Rural land lit up at dusk in the TIMCO service area" />
           </div>
         </div>
       </section>
@@ -183,7 +181,7 @@ export default function AboutPage() {
             Serving the Bayou Region from Hwy&nbsp;308.
           </h2>
           <p className="text-gray-300 mt-5 max-w-xl mx-auto leading-relaxed">
-            TIMCO works across Lafourche, Terrebonne, and Assumption parishes. If your property is in this footprint, we're probably nearby this week.
+            TIMCO works across Lafourche, Terrebonne, and Assumption parishes. If your land is in this footprint, we're probably nearby this week.
           </p>
           <div className="mt-8 flex flex-wrap gap-2 justify-center">
             {SITE.serviceArea.cities.map((c) => (

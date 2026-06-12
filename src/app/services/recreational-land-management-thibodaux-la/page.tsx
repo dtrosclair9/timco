@@ -13,7 +13,7 @@ const data: CityPageData = {
     imageAlt: 'Lone pine in vast green pasture on managed recreational acreage outside Thibodaux',
   },
   intro:
-    'TIMCO manages recreational acreage around Thibodaux and across Lafourche Parish — cutting, spraying, drainage, prescribed burns, tree clearing. Built for hunting properties, weekend retreats, and rural landowners who want their land kept right.',
+    'TIMCO reclaims and manages recreational acreage around Thibodaux and across Lafourche Parish — clearing overgrown land, then cutting, spraying, drainage, prescribed burns, and tree work. Built for hunting ground, weekend retreats, and rural landowners who want their land kept right.',
   highlights: [
     'Bush-hogging & field cutting',
     'Chemical application (food plots, fence lines)',
@@ -31,11 +31,11 @@ const data: CityPageData = {
     },
     {
       heading: 'Lafourche-area access',
-      body: 'A lot of Thibodaux-area recreational land sits down dirt roads, behind locked gates, or off back levees. We have the right trucks and trailers to get the equipment onto properties that other vendors skip.',
+      body: 'A lot of Thibodaux-area recreational land sits down dirt roads, behind locked gates, or off back levees. We have the right trucks and trailers to get the equipment onto ground that other vendors skip.',
     },
     {
       heading: 'Drainage in flat country',
-      body: 'Lafourche is flat. Standing water is the real problem on most Thibodaux-area rural property. We re-cut ditches, clear culverts, and shape sheet flow so your land actually drains after a heavy rain.',
+      body: 'Lafourche is flat. Standing water is the real problem on most Thibodaux-area rural land. We re-cut ditches, clear culverts, and shape sheet flow so your land actually drains after a heavy rain.',
     },
     {
       heading: 'Burns done safely',
@@ -49,7 +49,7 @@ const data: CityPageData = {
     },
     {
       q: 'Do you do recurring visits or just one-time resets?',
-      a: 'Both. We set up seasonal schedules for landowners who want regular cutting, spraying, and access maintenance. Or one-time resets to bring back a property that got away.',
+      a: 'Both. We set up seasonal schedules for landowners who want regular cutting, spraying, and access maintenance. Or one-time reclaims to bring back land that got away.',
     },
     {
       q: 'Can you do prescribed burns?',
@@ -67,18 +67,17 @@ const data: CityPageData = {
   photos: [
     { src: '/images/land-hero.jpg', alt: 'Dogs running past an old barn on managed Lafourche Parish acreage' },
     { src: '/images/land-pine.jpg', alt: 'Lone pine in a mowed field on TIMCO-managed Thibodaux-area land' },
-    { src: '/images/land-deer-stand.jpg', alt: 'Wooded canal with footbridge and feeders on a managed Lafourche property' },
+    { src: '/images/land-deer-stand.jpg', alt: 'Wooded canal with footbridge and feeders on managed Lafourche land' },
     { src: '/images/land-burn-day.jpg', alt: 'Controlled brush pile burn near Thibodaux for land management' },
     { src: '/images/land-burn-night.jpg', alt: 'Campfire at dusk among cypress on Thibodaux-area land' },
     { src: '/images/land-cypress.jpg', alt: 'Cypress trees along a bayou bank on Lafourche recreational land' },
-    { src: '/images/land-bayou-dock-1.jpg', alt: 'Concrete dock and piling on a bayou near a Thibodaux recreational property' },
+    { src: '/images/land-bayou-dock-1.jpg', alt: 'Concrete dock and piling on a bayou near Thibodaux recreational land' },
     { src: '/images/land-camp-dock.jpg', alt: 'Jon boat at a covered camp dock in Lafourche Parish' },
     { src: '/images/land-pasture.jpg', alt: 'Open rural pasture managed by TIMCO outside Thibodaux' },
   ],
   relatedCityPages: [
-    { href: '/services/recreational-land-management-houma-la', label: 'Land Management in Houma' },
-    { href: '/services/property-restoration-thibodaux-la', label: 'Property Restoration in Thibodaux' },
-    { href: '/services/property-restoration-houma-la', label: 'Property Restoration in Houma' },
+    { href: '/services/residential-land-management-thibodaux-la', label: 'Residential Land Management in Thibodaux' },
+    { href: '/services/commercial-land-management-thibodaux-la', label: 'Commercial Land Management in Thibodaux' },
   ],
 }
 

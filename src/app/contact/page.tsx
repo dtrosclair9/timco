@@ -3,8 +3,8 @@ import ContactForm from '@/components/ContactForm'
 import { SITE } from '@/lib/site'
 
 export const metadata: Metadata = {
-  title: 'Contact TIMCO – Property & Land Management in Thibodaux, LA',
-  description: `Contact TIMCO for a free quote on property restoration, residential or commercial property management, land restoration, or recreational land management in Thibodaux, LA. Call ${SITE.phoneDisplay} or send a message.`,
+  title: 'Contact TIMCO – Land Restoration & Management in Thibodaux, LA',
+  description: `Contact TIMCO for a free quote on residential, commercial, or recreational land management in Thibodaux, LA — clearing, cleanup, and recurring grounds care. Call ${SITE.phoneDisplay} or send a message.`,
   openGraph: {
     title: `Contact ${SITE.name} | Thibodaux, LA`,
     description: `Request a free quote from TIMCO. Call ${SITE.phoneDisplay} or fill out the contact form.`,
@@ -18,7 +18,7 @@ const schema = {
   '@type': 'ContactPage',
   name: `Contact ${SITE.legalName}`,
   url: `${SITE.baseUrl}/contact`,
-  description: `Contact page for ${SITE.legalName}, a property and land management company in ${SITE.address.city}, ${SITE.address.region}.`,
+  description: `Contact page for ${SITE.legalName}, a land management company in ${SITE.address.city}, ${SITE.address.region}.`,
   mainEntity: {
     '@type': 'LocalBusiness',
     name: SITE.legalName,
@@ -47,7 +47,7 @@ export default function ContactPage() {
             Tell {SITE.ownerShort} what you're dealing with.
           </h1>
           <p className="lede text-gray-300 mt-5 max-w-2xl">
-            Property that needs cleared, a yard that needs a schedule, acreage that needs reclaimed — send the details and Tim will follow up within a business day with a quote.
+            Land that needs cleared, a yard that needs a schedule, acreage that needs reclaimed — send the details and Tim will follow up within a business day with a quote.
           </p>
         </div>
       </section>
@@ -90,7 +90,7 @@ export default function ContactPage() {
                   No charge to look at it.
                 </p>
                 <p className="text-sm text-gray-300 mt-4 leading-relaxed">
-                  Tim drives out, walks the property with you, and gives an honest number. No pressure, no upsell on installs we don't do.
+                  Tim drives out, walks the land with you, and gives an honest number. No pressure, no upsell on installs we don't do.
                 </p>
               </div>
 

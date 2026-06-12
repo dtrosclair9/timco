@@ -1,15 +1,15 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
-import { SERVICES, BUCKETS, propertyServices, landServices, SITE } from '@/lib/site'
+import { SERVICES, SITE } from '@/lib/site'
 
 export const metadata: Metadata = {
-  title: 'Services – Property Management & Land Management in Thibodaux, LA',
+  title: 'Services – Residential, Commercial & Recreational Land Management',
   description:
-    'TIMCO services in Thibodaux, LA: property restoration, residential and commercial property management, land restoration, and recreational land management. Serving Lafourche, Terrebonne, and Assumption parishes.',
+    'TIMCO land management services in Thibodaux, LA: residential, commercial, and recreational land management — clearing, cleanup, and recurring grounds care. Serving Lafourche, Terrebonne, and Assumption parishes.',
   openGraph: {
     title: `TIMCO Services | Thibodaux, LA`,
-    description: 'Property restoration and management, land restoration and recreational land management.',
+    description: 'Residential, commercial, and recreational land management — restore and manage.',
     url: `${SITE.baseUrl}/services`,
   },
   alternates: { canonical: `${SITE.baseUrl}/services` },
@@ -39,9 +39,6 @@ const schema = {
   })),
 }
 
-const propertyBucket = BUCKETS.find((b) => b.bucket === 'property')!
-const landBucket = BUCKETS.find((b) => b.bucket === 'land')!
-
 export default function ServicesPage() {
   return (
     <>
@@ -51,42 +48,24 @@ export default function ServicesPage() {
         <div className="container-wide py-20 md:py-28">
           <p className="section-label">Services</p>
           <h1 className="heading-xl text-white mt-3 max-w-3xl text-balance">
-            Two divisions. Run out of one Hwy&nbsp;308 headquarters.
+            We restore &amp; manage land. Out of one Hwy&nbsp;308 HQ.
           </h1>
           <p className="lede text-gray-300 mt-6 max-w-2xl">
-            TIMCO works two sides of the same business: property management — restoration and recurring care for homes and businesses — and land management — reclaiming and maintaining rural and recreational acreage.
+            One job, two halves — reclaim the land that&apos;s grown over, then keep it that way. Residential, commercial, and recreational, across the Bayou Region.
           </p>
         </div>
       </section>
 
-      <section className="section-padding bg-white" aria-labelledby="property-section">
+      <section className="section-padding bg-white" aria-labelledby="services-list">
         <div className="container-wide">
           <SectionTitle
-            label="Property Management"
-            href={`/services/${propertyBucket.slug}`}
-            heading="Restoration and recurring care for homes and businesses."
-            body={propertyBucket.lead}
+            label="What We Do"
+            heading="Three kinds of land. Same standard."
+            body="Pick the work that fits — every service starts with a reset if the land needs it, then moves to ongoing management on your schedule."
           />
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 mt-12">
-            {propertyServices.map((s) => (
-              <ServiceCard key={s.slug} {...s} />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-gray-50 section-padding" aria-labelledby="land-section">
-        <div className="container-wide">
-          <SectionTitle
-            label="Land Management"
-            href={`/services/${landBucket.slug}`}
-            heading="Reclaiming and maintaining rural acreage."
-            body={landBucket.lead}
-          />
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 mt-12 max-w-4xl">
-            {landServices.map((s) => (
+            {SERVICES.map((s) => (
               <ServiceCard key={s.slug} {...s} />
             ))}
           </div>

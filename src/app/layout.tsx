@@ -21,19 +21,19 @@ const oswald = Oswald({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.baseUrl),
   title: {
-    default: `${SITE.name} | Property & Land Management in Thibodaux, LA`,
+    default: `${SITE.name} | Land Restoration & Management in Thibodaux, LA`,
     template: `%s | ${SITE.name}`,
   },
   description:
-    'TIMCO handles property restoration, residential and commercial property management, land restoration, and recreational land management in Thibodaux, LA. Insured. Serving Lafourche, Terrebonne, and Assumption parishes.',
+    'TIMCO is a land management company in Thibodaux, LA — restoring and managing residential, commercial, and recreational land. Clearing, cleanup, drainage, prescribed burns, and recurring grounds care. Insured. Serving Lafourche, Terrebonne, and Assumption parishes.',
   keywords: [
-    'property restoration Thibodaux',
-    'property management Thibodaux LA',
-    'residential property management Louisiana',
-    'commercial property management Thibodaux',
+    'land management Thibodaux',
     'land restoration Louisiana',
-    'recreational land management Louisiana',
     'land clearing Thibodaux LA',
+    'residential land management Louisiana',
+    'commercial land management Thibodaux',
+    'recreational land management Louisiana',
+    'lawn care Thibodaux LA',
     'TIMCO',
     'Lafourche Parish land services',
   ],

@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
-import { propertyServices, landServices, SITE } from '@/lib/site'
+import { SERVICES, SITE } from '@/lib/site'
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -94,16 +94,11 @@ export default function Header() {
                   onMouseLeave={scheduleClose}
                 >
                   <div className="bg-white shadow-xl border border-gray-100 grid grid-cols-1 divide-y divide-gray-100">
-                    <DropGroup title="Property Management" href="/services/property-management">
-                      {propertyServices.map((s) => (
+                    <div className="p-3 flex flex-col">
+                      {SERVICES.map((s) => (
                         <DropLink key={s.slug} href={`/services/${s.slug}`} title={s.title} sub={s.short} />
                       ))}
-                    </DropGroup>
-                    <DropGroup title="Land Management" href="/services/land-management">
-                      {landServices.map((s) => (
-                        <DropLink key={s.slug} href={`/services/${s.slug}`} title={s.title} sub={s.short} />
-                      ))}
-                    </DropGroup>
+                    </div>
                     <div className="p-4 bg-gray-50">
                       <Link
                         href="/services"
@@ -160,30 +155,13 @@ export default function Header() {
               <MobileLink href="/" label="Home" pathname={pathname} />
               <div className="px-2 py-3">
                 <Link
-                  href="/services/property-management"
+                  href="/services"
                   className="block text-xs font-bold uppercase tracking-mega text-gray-400 hover:text-accent mb-2"
                 >
-                  Property Management
+                  Services
                 </Link>
                 <div className="flex flex-col gap-1 ml-1">
-                  {propertyServices.map((s) => (
-                    <MobileLink
-                      key={s.slug}
-                      href={`/services/${s.slug}`}
-                      label={s.title}
-                      pathname={pathname}
-                      compact
-                    />
-                  ))}
-                </div>
-                <Link
-                  href="/services/land-management"
-                  className="block text-xs font-bold uppercase tracking-mega text-gray-400 hover:text-accent mb-2 mt-4"
-                >
-                  Land Management
-                </Link>
-                <div className="flex flex-col gap-1 ml-1">
-                  {landServices.map((s) => (
+                  {SERVICES.map((s) => (
                     <MobileLink
                       key={s.slug}
                       href={`/services/${s.slug}`}
@@ -246,21 +224,6 @@ function MobileLink({
     >
       {label}
     </Link>
-  )
-}
-
-function DropGroup({ title, href, children }: { title: string; href: string; children: React.ReactNode }) {
-  return (
-    <div className="p-3">
-      <Link
-        href={href}
-        className="block text-[10px] font-bold uppercase tracking-mega text-gray-400 hover:text-accent px-3 mb-1"
-        role="menuitem"
-      >
-        {title}
-      </Link>
-      <div className="flex flex-col">{children}</div>
-    </div>
   )
 }
 

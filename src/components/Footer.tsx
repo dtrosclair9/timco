@@ -21,7 +21,7 @@ export default function Footer() {
               />
             </div>
             <p className="text-sm leading-relaxed max-w-sm">
-              Property restoration, property management, and land management out of {SITE.address.city}, {SITE.address.region}.
+              Land restoration and management — residential, commercial, and recreational — out of {SITE.address.city}, {SITE.address.region}.
               Serving {SITE.serviceArea.parishes.join(', ')} parishes.
             </p>
             <p className="mt-4 text-xs uppercase tracking-mega text-gray-500">

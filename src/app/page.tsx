@@ -1,16 +1,15 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import { SERVICES, BUCKETS, propertyServices, landServices, SITE } from '@/lib/site'
+import { SERVICES, SITE } from '@/lib/site'
 
 export const metadata: Metadata = {
-  title: `${SITE.name} | Property & Land Management in Thibodaux, LA`,
+  title: `${SITE.name} | Land Restoration & Management in Thibodaux, LA`,
   description:
-    'TIMCO restores and maintains property and land from Thibodaux, LA. Property restoration, residential and commercial property management, land restoration, recreational land management. Insured. Call 985.665.7298.',
+    'TIMCO is a land management company in Thibodaux, LA. We restore and manage land — residential, commercial, and recreational. Clearing, cleanup, drainage, prescribed burns, and recurring grounds care. Insured. Call 985.665.7298.',
   openGraph: {
-    title: `${SITE.name} | Property & Land Management in Thibodaux, LA`,
-    description:
-      'TIMCO restores and maintains property and land across the Bayou Region. Insured. Call 985.665.7298.',
+    title: `${SITE.name} | Land Restoration & Management in Thibodaux, LA`,
+    description: 'We restore and manage land across the Bayou Region — residential, commercial, and recreational. Insured. Call 985.665.7298.',
     url: SITE.baseUrl,
   },
   alternates: { canonical: SITE.baseUrl },
@@ -25,7 +24,7 @@ const schema = {
       name: SITE.legalName,
       alternateName: SITE.name,
       description:
-        'Property restoration, residential and commercial property management, land restoration, and recreational land management in Thibodaux, Louisiana.',
+        'Land management company in Thibodaux, Louisiana — restoring and managing residential, commercial, and recreational land. Clearing, cleanup, drainage, prescribed burns, and recurring grounds care.',
       url: SITE.baseUrl,
       telephone: SITE.phoneRaw,
       email: SITE.email,
@@ -88,7 +87,7 @@ export default function HomePage() {
         <div className="absolute inset-0">
           <Image
             src="/images/hero-restoration.jpg"
-            alt="Restored residential property under massive oaks in Thibodaux, Louisiana by TIMCO"
+            alt="Restored land under massive oaks in Thibodaux, Louisiana by TIMCO"
             fill
             priority
             className="object-cover opacity-50"
@@ -98,16 +97,15 @@ export default function HomePage() {
         </div>
 
         <div className="relative container-wide py-28 md:py-40 lg:py-48">
-          <p className="section-label">{SITE.address.city}, {SITE.address.region} · Bayou Region</p>
+          <p className="section-label">{SITE.address.city}, {SITE.address.region} · {SITE.tagline}</p>
           <h1 className="heading-hero text-white mt-5 max-w-4xl text-balance">
-            We restore<br />
-            <span className="text-accent">overgrown property</span><br />
-            back to usable land.
+            We restore &amp;<br />
+            <span className="text-accent">manage land</span>.
           </h1>
           <p className="lede text-gray-200 mt-7 max-w-xl">
-            Brush clearing, tree work, debris removal, drainage, prescribed burns,
-            and recurring lawn care — for homes, businesses, and rural acreage.
-            One operator. One headquarters. {SITE.address.city}, {SITE.address.region}.
+            Clearing, cleanup, drainage, prescribed burns, and recurring grounds care —
+            for homes, businesses, and rural acreage across the Bayou Region. We bring
+            neglected land back, and we keep it that way.
           </p>
           <div className="mt-10 flex flex-wrap gap-3">
             <Link href="/contact" className="btn-accent text-sm">
@@ -122,7 +120,6 @@ export default function HomePage() {
           </div>
         </div>
 
-        {/* Scrolling proof strip */}
         <div className="relative border-t border-white/10 bg-primary-dark/60">
           <div className="container-wide py-5 grid grid-cols-2 md:grid-cols-4 gap-y-3 text-xs sm:text-sm">
             <ProofItem label="Established" value={String(SITE.established)} />
@@ -133,18 +130,18 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ───── BEFORE / AFTER ───── */}
-      <section className="section-padding bg-white" aria-labelledby="before-after-heading">
+      {/* ───── RESTORE (before/after) ───── */}
+      <section className="section-padding bg-white" aria-labelledby="restore-heading">
         <div className="container-wide">
           <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-12 gap-4">
             <div>
-              <p className="section-label">The Restoration</p>
-              <h2 id="before-after-heading" className="heading-xl text-primary mt-3 max-w-xl text-balance">
+              <p className="section-label">Restore</p>
+              <h2 id="restore-heading" className="heading-xl text-primary mt-3 max-w-xl text-balance">
                 From overgrown<br />to usable.
               </h2>
             </div>
             <p className="text-gray-600 max-w-md">
-              Real lots, real crews. We show up with the right equipment, do the work in days, and leave it usable for whatever's next — a build, a hunt, a sale.
+              Every job can start with a reset. We show up with the right equipment, do the work in days, and leave the land usable for whatever&apos;s next — a build, a hunt, a sale, or a fresh schedule.
             </p>
           </div>
 
@@ -152,7 +149,7 @@ export default function HomePage() {
             <BeforeAfter
               beforeSrc="/images/restoration-before-1.jpg"
               afterSrc="/images/restoration-after-1.jpg"
-              caption="Property edge — brush + clearing"
+              caption="Home lot — clearing & cleanup"
             />
             <BeforeAfter
               beforeSrc="/images/restoration-before-2.jpg"
@@ -162,8 +159,8 @@ export default function HomePage() {
           </div>
 
           <div className="mt-10 text-center">
-            <Link href="/services/property-restoration" className="btn-ghost">
-              See more restoration work
+            <Link href="/services" className="btn-ghost">
+              See what we do
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" />
               </svg>
@@ -172,65 +169,47 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ───── SERVICES ───── */}
+      {/* ───── SERVICES (manage) ───── */}
       <section className="section-padding bg-gray-50" aria-labelledby="services-heading">
         <div className="container-wide">
           <div className="text-center mb-14 max-w-2xl mx-auto">
-            <p className="section-label">What TIMCO Does</p>
+            <p className="section-label">Manage</p>
             <h2 id="services-heading" className="heading-xl text-primary mt-3 text-balance">
-              Two divisions.<br />One HQ on Hwy&nbsp;308.
+              Three kinds of land.<br />One HQ on Hwy&nbsp;308.
             </h2>
             <p className="lede mt-5">
-              Property management keeps homes and businesses sharp — from a one-time restoration to recurring lawn and grounds care. Land management reclaims and maintains the rural side, acre after acre.
+              Restoration is the reset. Management is the part that keeps it that way — week after week, season after season — for residential, commercial, and recreational land.
             </p>
           </div>
 
-          <div className="space-y-14">
-            {BUCKETS.map((bucket) => {
-              const items = bucket.bucket === 'property' ? propertyServices : landServices
-              return (
-                <div key={bucket.slug}>
-                  <div className="flex items-end justify-between border-b border-gray-200 pb-3 mb-6">
-                    <h3 className="heading-md text-primary">{bucket.title}</h3>
-                    <Link
-                      href={`/services/${bucket.slug}`}
-                      className="text-accent hover:text-accent-dark text-xs font-bold uppercase tracking-mega shrink-0"
-                    >
-                      View all →
-                    </Link>
-                  </div>
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-                    {items.map((service) => (
-                      <Link
-                        key={service.slug}
-                        href={`/services/${service.slug}`}
-                        className="group relative overflow-hidden bg-white shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100"
-                      >
-                        <div className="relative h-52 overflow-hidden">
-                          <Image
-                            src={service.image}
-                            alt={`${service.title} by TIMCO in Thibodaux, Louisiana`}
-                            fill
-                            className="object-cover group-hover:scale-105 transition-transform duration-700"
-                            sizes="(max-width: 768px) 100vw, 33vw"
-                          />
-                          <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent" />
-                          <div className="absolute bottom-5 left-5 right-5">
-                            <h4 className="heading-sm text-white">{service.title}</h4>
-                          </div>
-                        </div>
-                        <div className="p-6">
-                          <p className="text-sm text-gray-700 leading-relaxed">{service.lead}</p>
-                          <p className="mt-4 text-accent text-xs font-bold uppercase tracking-mega group-hover:text-accent-dark transition-colors">
-                            Learn more →
-                          </p>
-                        </div>
-                      </Link>
-                    ))}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+            {SERVICES.map((service) => (
+              <Link
+                key={service.slug}
+                href={`/services/${service.slug}`}
+                className="group relative overflow-hidden bg-white shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100"
+              >
+                <div className="relative h-52 overflow-hidden">
+                  <Image
+                    src={service.image}
+                    alt={`${service.title} by TIMCO in Thibodaux, Louisiana`}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-700"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent" />
+                  <div className="absolute bottom-5 left-5 right-5">
+                    <h3 className="heading-sm text-white">{service.title}</h3>
                   </div>
                 </div>
-              )
-            })}
+                <div className="p-6">
+                  <p className="text-sm text-gray-700 leading-relaxed">{service.lead}</p>
+                  <p className="mt-4 text-accent text-xs font-bold uppercase tracking-mega group-hover:text-accent-dark transition-colors">
+                    Learn more →
+                  </p>
+                </div>
+              </Link>
+            ))}
           </div>
         </div>
       </section>
@@ -255,14 +234,14 @@ export default function HomePage() {
             <div className="lg:col-span-7">
               <p className="section-label">About TIMCO</p>
               <h2 id="about-snippet-heading" className="heading-xl text-primary mt-3 max-w-lg text-balance">
-                One operator.<br />Two sides of the same business.
+                A land manager,<br />through and through.
               </h2>
               <div className="mt-6 space-y-4 text-gray-700 leading-relaxed">
                 <p>
-                  TIMCO was founded by <strong className="text-primary">{SITE.owner}</strong> in {SITE.established} as a property and land company — rooted in {SITE.address.city} and built on showing up, doing the work, and leaving the place better than we found it.
+                  TIMCO was founded by <strong className="text-primary">{SITE.owner}</strong> in {SITE.established} as a land management company — rooted in {SITE.address.city} and built on showing up, doing the work, and leaving the land better than we found it.
                 </p>
                 <p>
-                  From the same HQ on Hwy&nbsp;308, TIMCO handles two sides of the same job: <strong className="text-primary">property management</strong> for homes and businesses, and <strong className="text-primary">land management</strong> for the rural acreage that needs reclaiming or maintaining. Different ground, same standard.
+                  It&apos;s one job, two halves: <strong className="text-primary">restore</strong> the land that&apos;s grown over, then <strong className="text-primary">manage</strong> it so it stays that way — residential, commercial, or recreational. Different ground, same standard.
                 </p>
               </div>
               <div className="mt-8 flex flex-wrap gap-3">
@@ -305,10 +284,10 @@ export default function HomePage() {
             <div>
               <p className="section-label">Get a Quote</p>
               <h2 id="cta-heading" className="heading-xl text-primary mt-3 text-balance">
-                Got a property that needs work?
+                Got land that needs work?
               </h2>
               <p className="text-gray-700 mt-5 leading-relaxed">
-                Tell us where it is and what shape it's in. Tim will follow up within a business day to walk through it and put a number on it.
+                Tell us where it is and what shape it&apos;s in. Tim will follow up within a business day to walk through it and put a number on it.
               </p>
             </div>
             <div className="flex flex-col gap-3">
@@ -352,7 +331,7 @@ function BeforeAfter({
         <div className="relative aspect-[4/3] overflow-hidden bg-gray-100">
           <Image
             src={beforeSrc}
-            alt="Property before restoration by TIMCO"
+            alt="Land before restoration by TIMCO"
             fill
             className="object-cover"
             sizes="(max-width: 768px) 50vw, 25vw"
@@ -364,7 +343,7 @@ function BeforeAfter({
         <div className="relative aspect-[4/3] overflow-hidden bg-gray-100">
           <Image
             src={afterSrc}
-            alt="Property after restoration by TIMCO"
+            alt="Land after restoration by TIMCO"
             fill
             className="object-cover"
             sizes="(max-width: 768px) 50vw, 25vw"
