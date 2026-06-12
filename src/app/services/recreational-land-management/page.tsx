@@ -15,7 +15,7 @@ const SLUG = 'recreational-land-management'
 export const metadata: Metadata = {
   title: 'Recreational Land Management in Thibodaux, LA – Clear, Cut, Drain, Burn',
   description:
-    'TIMCO reclaims and manages recreational acreage in Lafourche, Terrebonne, and Assumption — clearing overgrown land, then cutting, spraying, drainage, prescribed burns, and tree work. Built for hunting ground and rural landowners.',
+    'TIMCO reclaims and manages recreational acreage in Lafourche, Terrebonne, and Assumption — clearing overgrown land, opening up canals, bayous, and right-of-ways so they drain again, plus cutting, spraying, prescribed burns, and tree work. Built for hunting ground and rural landowners.',
   openGraph: {
     title: 'Recreational Land Management in Thibodaux, LA | TIMCO',
     description: 'Reclaim overgrown acreage, then keep it open — clearing, cutting, drainage, prescribed burns, tree work.',
@@ -46,10 +46,10 @@ export default function RecreationalLandPage() {
         }
         intro={
           <>
-            You bought the 60 acres. Now somebody has to cut it, spray it, run the
-            drainage, clear the trees, and torch the brush before it gets away from
-            you again. That's the work TIMCO does for recreational landowners
-            across the Bayou Region.
+            You bought the 60 acres. Now somebody has to cut it, spray it, clear the
+            trees, torch the brush, and open the canal back up so it actually drains.
+            That&apos;s the work TIMCO does for recreational landowners across the Bayou
+            Region — by boat or on foot, boots and chainsaws.
           </>
         }
         image="/images/land-hero.jpg"
@@ -62,11 +62,12 @@ export default function RecreationalLandPage() {
         description="A lot of rural acreage starts with a heavy reclaim — clearing land that's grown over for years — and moves to ongoing care: the cutting and spraying that keeps fields open, the prescribed burns that reset the cycle, and the drainage and tree work that prevents next year's problems."
         items={[
           'Heavy clearing &amp; land reclamation',
+          'Canal, bayou &amp; right-of-way clearing',
+          'Ditch &amp; culvert drainage cleanup',
           'Bush-hogging &amp; field cutting',
           'Chemical application (weed kill, fence lines, food plots)',
           'Brush, scrub &amp; small tree clearing',
           'Selective tree work &amp; deadfall removal',
-          'Drainage cleanup &amp; reshaping',
           'Prescribed brush burns &amp; pile burns',
           'Access road grading &amp; food plot prep',
         ]}
@@ -95,8 +96,8 @@ export default function RecreationalLandPage() {
             body: "Bobcat, zero-turn, trailers, sprayer, and the trucks to get them onto remote ground. We don't show up undersized for the job.",
           },
           {
-            title: 'Drainage we understand',
-            body: 'South Louisiana land without drainage is a swamp by August. We re-cut ditches, clear culverts, and shape sheet flow so the ground actually drains.',
+            title: 'Canals, bayous & right-of-ways',
+            body: "Opening up canals, bayous, servitudes, and right-of-ways that grew over and stopped draining is work Tim takes pride in. We pull every bit of debris — by boat or on foot, boots and chainsaws — until a ditch that was unnavigable runs patent and drains again.",
           },
           {
             title: 'Local presence',

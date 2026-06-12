@@ -18,10 +18,10 @@ const data: CityPageData = {
     'Bush-hogging & field cutting',
     'Chemical application (food plots, fence lines)',
     'Brush & small tree clearing',
-    'Drainage cleanup & reshaping',
+    'Canal, bayou & right-of-way clearing',
+    'Ditch & culvert drainage cleanup',
     'Prescribed pile burns',
     'Selective tree work & deadfall',
-    'Access road grading',
     'Seasonal & one-time visits',
   ],
   localContext: [
@@ -34,8 +34,8 @@ const data: CityPageData = {
       body: 'A lot of Thibodaux-area recreational land sits down dirt roads, behind locked gates, or off back levees. We have the right trucks and trailers to get the equipment onto ground that other vendors skip.',
     },
     {
-      heading: 'Drainage in flat country',
-      body: 'Lafourche is flat. Standing water is the real problem on most Thibodaux-area rural land. We re-cut ditches, clear culverts, and shape sheet flow so your land actually drains after a heavy rain.',
+      heading: 'Canals, bayous & drainage',
+      body: "Lafourche is flat — standing water is the real problem out here. Opening up canals, bayous, servitudes, and right-of-ways that grew over and stopped draining is work Tim takes pride in. We pull the debris by boat or on foot, boots and chainsaws, until a ditch that was unnavigable runs patent and drains again.",
     },
     {
       heading: 'Burns done safely',
@@ -50,6 +50,10 @@ const data: CityPageData = {
     {
       q: 'Do you do recurring visits or just one-time resets?',
       a: 'Both. We set up seasonal schedules for landowners who want regular cutting, spraying, and access maintenance. Or one-time reclaims to bring back land that got away.',
+    },
+    {
+      q: 'Do you clear canals, bayous, and right-of-ways?',
+      a: 'Yes — it\'s some of our favorite work. We open up canals, bayous, servitudes, and right-of-ways that have grown over and stopped draining, pulling all the debris by boat or on foot with chainsaws until the water runs and a ditch that was unnavigable is patent again.',
     },
     {
       q: 'Can you do prescribed burns?',

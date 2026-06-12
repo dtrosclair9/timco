@@ -58,7 +58,7 @@ export const SERVICES = [
     slug: 'recreational-land-management',
     title: 'Recreational Land Management',
     short: 'Reclaim and manage rural and hunting acreage.',
-    lead: 'Reclaim overgrown rural land, then keep it productive — clearing, cutting, spraying, drainage, prescribed burns, and tree work. Recreational and hunting ground kept accessible season after season.',
+    lead: 'Reclaim overgrown rural land, then keep it productive — clearing, cutting, spraying, prescribed burns, tree work, and opening up canals, bayous, and right-of-ways so they drain again. Hunting ground kept accessible season after season.',
     icon: 'land',
     image: '/images/land-pine.jpg',
   },
