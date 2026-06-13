@@ -6,7 +6,7 @@ export const SITE = {
   legalName: 'TIMCO LLC',
   tagline: 'Land Restoration & Management in Thibodaux, LA',
   slogan: 'We Restore & Manage Land',
-  baseUrl: 'https://timcola.com', // TODO: confirm domain spelling before launch
+  baseUrl: 'https://timcomanagement.com', // confirmed 2026-06-12
   owner: 'Timothy Caillouet',
   ownerShort: 'Tim',
   ownerTitle: 'Owner / Operator',
@@ -66,11 +66,17 @@ export const SERVICES = [
 
 export type ServiceSlug = (typeof SERVICES)[number]['slug']
 
-// One dedicated Thibodaux city landing page per service.
+// City landing pages — Thibodaux (HQ) for all 3 services, plus Houma & Raceland
+// for the higher-demand service+city combos.
 export const CITY_PAGES = [
   { service: 'residential-land-management', city: 'thibodaux', cityName: 'Thibodaux' },
   { service: 'commercial-land-management', city: 'thibodaux', cityName: 'Thibodaux' },
   { service: 'recreational-land-management', city: 'thibodaux', cityName: 'Thibodaux' },
+  { service: 'residential-land-management', city: 'houma', cityName: 'Houma' },
+  { service: 'commercial-land-management', city: 'houma', cityName: 'Houma' },
+  { service: 'recreational-land-management', city: 'houma', cityName: 'Houma' },
+  { service: 'recreational-land-management', city: 'raceland', cityName: 'Raceland' },
+  { service: 'residential-land-management', city: 'raceland', cityName: 'Raceland' },
 ] as const
 
 export const NAV_LINKS = [

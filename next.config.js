@@ -15,7 +15,7 @@ const nextConfig = {
       // removed city pages → nearest live equivalent
       { source: '/services/property-restoration-thibodaux-la', destination: '/services/residential-land-management-thibodaux-la', permanent: true },
       { source: '/services/property-restoration-houma-la', destination: '/services/residential-land-management-thibodaux-la', permanent: true },
-      { source: '/services/recreational-land-management-houma-la', destination: '/services/recreational-land-management-thibodaux-la', permanent: true },
+      // (recreational-land-management-houma-la is a live page again as of 2026-06-12 — no redirect)
     ]
   },
 }

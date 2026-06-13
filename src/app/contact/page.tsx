@@ -3,8 +3,8 @@ import ContactForm from '@/components/ContactForm'
 import { SITE } from '@/lib/site'
 
 export const metadata: Metadata = {
-  title: 'Contact TIMCO – Land Restoration & Management in Thibodaux, LA',
-  description: `Contact TIMCO for a free quote on residential, commercial, or recreational land management in Thibodaux, LA — clearing, cleanup, and recurring grounds care. Call ${SITE.phoneDisplay} or send a message.`,
+  title: 'Contact – Land Management & Clearing, Thibodaux LA',
+  description: `Contact TIMCO for a free quote on land clearing, lawn care, bush hogging, or grounds maintenance in Thibodaux, LA. Call ${SITE.phoneDisplay} or send a message.`,
   openGraph: {
     title: `Contact ${SITE.name} | Thibodaux, LA`,
     description: `Request a free quote from TIMCO. Call ${SITE.phoneDisplay} or fill out the contact form.`,

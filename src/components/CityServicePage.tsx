@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { SITE } from '@/lib/site'
 
 export type CityPageData = {
-  service: string
+  service: string // brand/category name — used in breadcrumb, schema serviceType, link text
   serviceSlug: string
   city: string
   citySlug: string
@@ -16,6 +16,10 @@ export type CityPageData = {
   photos: { src: string; alt: string }[]
   relatedCityPages?: { href: string; label: string }[]
   parentServiceHref: string
+  // SEO overrides — lead with what people actually search, keep brand as the wrapper.
+  headline?: string // page H1 (search-led, e.g. "Land Clearing & Lawn Care"); defaults to `service`
+  metaTitle?: string // <title> base (search-led); brand template appends " | TIMCO"
+  metaDescription?: string // trimmed ~155-char description; defaults to intro
 }
 
 export function CityServiceLayout(d: CityPageData) {
@@ -96,7 +100,7 @@ export function CityServiceLayout(d: CityPageData) {
         <div className="relative container-wide py-24 md:py-32">
           <p className="section-label">{d.city}, {d.parish}</p>
           <h1 className="heading-hero text-white mt-4 max-w-4xl text-balance">
-            {d.service} in<br />
+            {d.headline ?? d.service} in<br />
             <span className="text-accent">{d.city}, LA</span>.
           </h1>
           <p className="lede text-gray-200 mt-6 max-w-2xl">{d.intro}</p>
@@ -280,14 +284,19 @@ export function buildMetadata(d: {
   city: string
   citySlug: string
   intro: string
+  metaTitle?: string
+  metaDescription?: string
 }) {
   const fullSlug = `${d.serviceSlug}-${d.citySlug}-la`
+  // Brand suffix " | TIMCO" is added by the root layout title template — don't repeat it here.
+  const title = d.metaTitle ?? `${d.service} in ${d.city}, LA`
+  const description = d.metaDescription ?? d.intro
   return {
-    title: `${d.service} in ${d.city}, LA – ${SITE.name}`,
-    description: d.intro,
+    title,
+    description,
     openGraph: {
-      title: `${d.service} in ${d.city}, LA | ${SITE.name}`,
-      description: d.intro,
+      title: `${title} | ${SITE.name}`,
+      description,
       url: `${SITE.baseUrl}/services/${fullSlug}`,
     },
     alternates: { canonical: `${SITE.baseUrl}/services/${fullSlug}` },

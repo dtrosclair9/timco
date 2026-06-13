@@ -13,12 +13,12 @@ import {
 const SLUG = 'residential-land-management'
 
 export const metadata: Metadata = {
-  title: 'Residential Land Management in Thibodaux, LA – Restore & Maintain',
+  title: 'Residential Land Management & Land Clearing, Thibodaux',
   description:
-    'TIMCO restores and maintains residential land in Thibodaux, LA — clearing overgrown yards and lots, then recurring lawn and grounds care. Weekly, bi-weekly, or monthly. Insured.',
+    'TIMCO clears overgrown residential lots and yards, then keeps your lawn and grounds on a schedule across Thibodaux and Lafourche Parish. Insured.',
   openGraph: {
-    title: 'Residential Land Management in Thibodaux, LA | TIMCO',
-    description: 'Restore an overgrown yard, then keep it sharp — residential land management across the Bayou Region.',
+    title: 'Residential Land Clearing & Lawn Care in Thibodaux, LA | TIMCO',
+    description: 'Overgrown yard cleared, then your lawn kept on a schedule — residential land management across the Bayou Region.',
     url: `${SITE.baseUrl}/services/${SLUG}`,
   },
   alternates: { canonical: `${SITE.baseUrl}/services/${SLUG}` },
@@ -37,7 +37,7 @@ export default function ResidentialLandManagementPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
 
       <ServiceHero
-        label="Land Management"
+        label="Residential Land Management"
         title={
           <>
             Residential land<br />
@@ -46,10 +46,10 @@ export default function ResidentialLandManagementPage() {
         }
         intro={
           <>
-            We <strong className="text-white">restore</strong> an overgrown yard or lot — clearing,
-            cleanup, the whole reset — and then <strong className="text-white">manage</strong> it on a
-            schedule you set. One crew brings your place back and keeps it that way, whether you&apos;re
-            home every weekend or away for the season.
+            <strong className="text-white">Land clearing and lawn care</strong> for your home — we clear
+            an overgrown yard or lot, haul the debris, and then keep the lawn and grounds on a schedule
+            you set. One crew brings your place back and maintains it, whether you&apos;re home every
+            weekend or away for the season.
           </>
         }
         image="/images/res-home-modern.jpg"
@@ -121,6 +121,8 @@ export default function ResidentialLandManagementPage() {
       <ServiceAreaBand
         cityPages={[
           { href: `/services/${SLUG}-thibodaux-la`, label: 'Residential Land Management in Thibodaux' },
+          { href: `/services/${SLUG}-houma-la`, label: 'Residential Land Management in Houma' },
+          { href: `/services/${SLUG}-raceland-la`, label: 'Residential Land Management in Raceland' },
         ]}
       />
 

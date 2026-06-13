@@ -4,12 +4,12 @@ import Link from 'next/link'
 import { SERVICES, SITE } from '@/lib/site'
 
 export const metadata: Metadata = {
-  title: `${SITE.name} | Land Restoration & Management in Thibodaux, LA`,
+  title: `${SITE.name} | Land Clearing & Land Management in Thibodaux, LA`,
   description:
-    'TIMCO is a land management company in Thibodaux, LA. We restore and manage land — residential, commercial, and recreational. Clearing, cleanup, drainage, prescribed burns, and recurring grounds care. Insured. Call 985.665.7298.',
+    'TIMCO is a land management company in Thibodaux, LA — land clearing, lawn care, bush hogging, grounds maintenance, drainage and canal clearing. Insured.',
   openGraph: {
-    title: `${SITE.name} | Land Restoration & Management in Thibodaux, LA`,
-    description: 'We restore and manage land across the Bayou Region — residential, commercial, and recreational. Insured. Call 985.665.7298.',
+    title: `${SITE.name} | Land Clearing & Land Management in Thibodaux, LA`,
+    description: 'Land clearing, lawn care, bush hogging, grounds maintenance, and canal & drainage clearing across the Bayou Region. Insured.',
     url: SITE.baseUrl,
   },
   alternates: { canonical: SITE.baseUrl },

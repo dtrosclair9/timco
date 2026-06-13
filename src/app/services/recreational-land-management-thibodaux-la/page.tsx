@@ -8,6 +8,9 @@ const data: CityPageData = {
   citySlug: 'thibodaux',
   parish: 'Lafourche Parish',
   parentServiceHref: '/services/recreational-land-management',
+  metaTitle: 'Recreational Land Management & Bush Hogging, Thibodaux',
+  metaDescription:
+    'Bush hogging, land clearing, drainage, and canal & right-of-way clearing for Thibodaux hunting ground and rural acreage across Lafourche Parish. Insured.',
   hero: {
     image: '/images/land-pine.jpg',
     imageAlt: 'Lone pine in vast green pasture on managed recreational acreage outside Thibodaux',

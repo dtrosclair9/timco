@@ -13,12 +13,12 @@ import {
 const SLUG = 'commercial-land-management'
 
 export const metadata: Metadata = {
-  title: 'Commercial Land Management in Thibodaux, LA – Offices, Apartments, HOAs',
+  title: 'Commercial Land Management & Grounds Care, Thibodaux',
   description:
-    'TIMCO restores and maintains commercial grounds in Thibodaux, LA — offices, apartment complexes, and HOA common areas. One-time cleanup and clearing, then recurring grounds maintenance on a reliable schedule. Insured.',
+    'Commercial grounds maintenance and cleanup for Thibodaux offices, apartments, and HOAs — clearing, mowing, reliable schedule. Insured.',
   openGraph: {
-    title: 'Commercial Land Management in Thibodaux, LA | TIMCO',
-    description: 'Restore and maintain commercial grounds — offices, apartments, and HOAs across the Bayou Region.',
+    title: 'Commercial Land Management & Grounds Maintenance in Thibodaux, LA | TIMCO',
+    description: 'Grounds maintenance and cleanup for offices, apartments, and HOAs across the Bayou Region.',
     url: `${SITE.baseUrl}/services/${SLUG}`,
   },
   alternates: { canonical: `${SITE.baseUrl}/services/${SLUG}` },
@@ -37,7 +37,7 @@ export default function CommercialLandManagementPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
 
       <ServiceHero
-        label="Land Management"
+        label="Commercial Land Management"
         title={
           <>
             Commercial land<br />
@@ -46,10 +46,10 @@ export default function CommercialLandManagementPage() {
         }
         intro={
           <>
-            We <strong className="text-white">restore</strong> a site that&apos;s gotten away and
-            then <strong className="text-white">manage</strong> it on a reliable schedule — for
+            <strong className="text-white">Grounds maintenance and cleanup</strong> for
             <strong className="text-white"> offices, apartment complexes, and HOAs</strong> across the
-            Bayou Region. Predictable schedule, predictable invoice, certificate of insurance on file.
+            Bayou Region. We clear a site that&apos;s gotten away, then keep it on a reliable schedule —
+            predictable invoice, certificate of insurance on file.
           </>
         }
         image="/images/comm-bobcat-apartments.jpg"
@@ -149,6 +149,7 @@ export default function CommercialLandManagementPage() {
       <ServiceAreaBand
         cityPages={[
           { href: `/services/${SLUG}-thibodaux-la`, label: 'Commercial Land Management in Thibodaux' },
+          { href: `/services/${SLUG}-houma-la`, label: 'Commercial Land Management in Houma' },
         ]}
       />
 

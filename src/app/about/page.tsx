@@ -4,11 +4,11 @@ import Link from 'next/link'
 import { SITE } from '@/lib/site'
 
 export const metadata: Metadata = {
-  title: `About TIMCO – Meet ${SITE.owner}`,
-  description: `${SITE.legalName} is owned and operated by ${SITE.owner} out of Thibodaux, Louisiana. A land management company — restoring and managing residential, commercial, and recreational land from one Hwy 308 headquarters.`,
+  title: `About – ${SITE.owner}, Land Management`,
+  description: `${SITE.legalName} is a land management company owned by ${SITE.owner} in Thibodaux, LA — land clearing, lawn care, and rural acreage work across the Bayou Region.`,
   openGraph: {
-    title: `About ${SITE.name} | Thibodaux, LA`,
-    description: `Meet ${SITE.owner}, owner of ${SITE.name} — land restoration and management, residential, commercial, and recreational, from Thibodaux, Louisiana.`,
+    title: `About ${SITE.name} | Land Management in Thibodaux, LA`,
+    description: `Meet ${SITE.owner}, owner of ${SITE.name} — land management, clearing, and grounds care from Thibodaux, Louisiana.`,
     url: `${SITE.baseUrl}/about`,
   },
   alternates: { canonical: `${SITE.baseUrl}/about` },

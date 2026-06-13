@@ -13,12 +13,12 @@ import {
 const SLUG = 'recreational-land-management'
 
 export const metadata: Metadata = {
-  title: 'Recreational Land Management in Thibodaux, LA – Clear, Cut, Drain, Burn',
+  title: 'Recreational Land Management & Bush Hogging, Thibodaux',
   description:
-    'TIMCO reclaims and manages recreational acreage in Lafourche, Terrebonne, and Assumption — clearing overgrown land, opening up canals, bayous, and right-of-ways so they drain again, plus cutting, spraying, prescribed burns, and tree work. Built for hunting ground and rural landowners.',
+    'Bush hogging, land clearing, drainage, and canal & right-of-way clearing for hunting ground and rural acreage across Thibodaux and the Bayou Region. Insured.',
   openGraph: {
-    title: 'Recreational Land Management in Thibodaux, LA | TIMCO',
-    description: 'Reclaim overgrown acreage, then keep it open — clearing, cutting, drainage, prescribed burns, tree work.',
+    title: 'Recreational Land Management & Bush Hogging in Thibodaux, LA | TIMCO',
+    description: 'Bush hogging, land clearing, drainage, prescribed burns, and canal/right-of-way clearing for rural acreage.',
     url: `${SITE.baseUrl}/services/${SLUG}`,
   },
   alternates: { canonical: `${SITE.baseUrl}/services/${SLUG}` },
@@ -37,7 +37,7 @@ export default function RecreationalLandPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
 
       <ServiceHero
-        label="Land Management"
+        label="Recreational Land Management"
         title={
           <>
             Recreational land<br />
@@ -46,7 +46,7 @@ export default function RecreationalLandPage() {
         }
         intro={
           <>
-            You bought the 60 acres. Now somebody has to cut it, spray it, clear the
+            You bought the 60 acres. Now somebody has to bush-hog it, spray it, clear the
             trees, torch the brush, and open the canal back up so it actually drains.
             That&apos;s the work TIMCO does for recreational landowners across the Bayou
             Region — by boat or on foot, boots and chainsaws.
@@ -124,6 +124,8 @@ export default function RecreationalLandPage() {
       <ServiceAreaBand
         cityPages={[
           { href: `/services/${SLUG}-thibodaux-la`, label: 'Recreational Land Management in Thibodaux' },
+          { href: `/services/${SLUG}-houma-la`, label: 'Recreational Land Management in Houma' },
+          { href: `/services/${SLUG}-raceland-la`, label: 'Recreational Land Management in Raceland' },
         ]}
       />
 

@@ -4,12 +4,12 @@ import Image from 'next/image'
 import { SERVICES, SITE } from '@/lib/site'
 
 export const metadata: Metadata = {
-  title: 'Services – Residential, Commercial & Recreational Land Management',
+  title: 'Land Management & Land Clearing Services, Thibodaux',
   description:
-    'TIMCO land management services in Thibodaux, LA: residential, commercial, and recreational land management — clearing, cleanup, and recurring grounds care. Serving Lafourche, Terrebonne, and Assumption parishes.',
+    'Land clearing, lawn care, bush hogging, grounds maintenance, and canal & drainage clearing across Thibodaux and the Bayou Region. Land management, insured.',
   openGraph: {
-    title: `TIMCO Services | Thibodaux, LA`,
-    description: 'Residential, commercial, and recreational land management — restore and manage.',
+    title: `Land Management Services in Thibodaux, LA | TIMCO`,
+    description: 'Land clearing, lawn care, bush hogging, grounds maintenance, and canal & drainage clearing across the Bayou Region.',
     url: `${SITE.baseUrl}/services`,
   },
   alternates: { canonical: `${SITE.baseUrl}/services` },

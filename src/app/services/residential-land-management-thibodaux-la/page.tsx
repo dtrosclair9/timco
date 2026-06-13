@@ -8,6 +8,9 @@ const data: CityPageData = {
   citySlug: 'thibodaux',
   parish: 'Lafourche Parish',
   parentServiceHref: '/services/residential-land-management',
+  metaTitle: 'Residential Land Management & Land Clearing, Thibodaux',
+  metaDescription:
+    'Land clearing, lawn care, and cleanup for Thibodaux homes — overgrown lots reclaimed, then grounds kept on a schedule across Lafourche Parish. Insured.',
   hero: {
     image: '/images/comm-after-white-home.jpg',
     imageAlt: 'Home with a freshly mowed lawn after TIMCO residential land management in Thibodaux, Louisiana',
