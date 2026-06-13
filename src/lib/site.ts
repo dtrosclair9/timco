@@ -31,7 +31,7 @@ export const SITE = {
     cities: ['Thibodaux', 'Houma', 'Raceland', 'Chackbay', 'Napoleonville', 'Schriever'],
     primaryRegion: 'Bayou Region',
   },
-  formspreeId: 'FORMSPREE_ID', // TODO: set real Formspree form ID before launch
+  formspreeId: 'mlgkobzq', // live Formspree form — destination email is set in the Formspree dashboard
   established: 2021,
 } as const
 
