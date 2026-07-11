@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { SITE } from '@/lib/site'
+import { SITE, ogImage } from '@/lib/site'
 import {
   ServiceHero,
   IncludedList,
@@ -15,11 +15,12 @@ const SLUG = 'commercial-land-management'
 export const metadata: Metadata = {
   title: 'Commercial Land Management & Grounds Care, Thibodaux',
   description:
-    'Commercial grounds maintenance and cleanup for Thibodaux offices, apartments, and HOAs — clearing, mowing, reliable schedule. Insured.',
+    'Commercial land management for Thibodaux offices, apartments, and HOAs — grounds maintenance, mowing, brush clearing, and cleanup on a set schedule. Insured.',
   openGraph: {
     title: 'Commercial Land Management & Grounds Maintenance in Thibodaux, LA | TIMCO',
     description: 'Grounds maintenance and cleanup for offices, apartments, and HOAs across the Bayou Region.',
     url: `${SITE.baseUrl}/services/${SLUG}`,
+    images: [ogImage],
   },
   alternates: { canonical: `${SITE.baseUrl}/services/${SLUG}` },
 }

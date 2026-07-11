@@ -10,7 +10,7 @@ const data: CityPageData = {
   parentServiceHref: '/services/commercial-land-management',
   metaTitle: 'Commercial Land Management & Grounds Care, Thibodaux',
   metaDescription:
-    'Grounds maintenance and cleanup for Thibodaux offices, apartments, and HOAs — clearing, mowing, reliable schedule across Lafourche Parish. Insured.',
+    'Commercial land management for Thibodaux offices, apartments, and HOAs — grounds maintenance, mowing, brush clearing, and cleanup in Lafourche Parish. Insured.',
   hero: {
     image: '/images/comm-bobcat-apartments.jpg',
     imageAlt: 'TIMCO Bobcat mowing apartment grounds — commercial land management in Thibodaux, Louisiana',

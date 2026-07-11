@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { SITE } from '@/lib/site'
+import { SITE, ogImage } from '@/lib/site'
 import {
   ServiceHero,
   IncludedList,
@@ -15,11 +15,12 @@ const SLUG = 'residential-land-management'
 export const metadata: Metadata = {
   title: 'Residential Land Management & Land Clearing, Thibodaux',
   description:
-    'TIMCO clears overgrown residential lots and yards, then keeps your lawn and grounds on a schedule across Thibodaux and Lafourche Parish. Insured.',
+    'TIMCO clears overgrown residential lots and yards, then keeps your lawn, grounds, and landscaping on a schedule across Thibodaux and Lafourche Parish. Insured.',
   openGraph: {
     title: 'Residential Land Clearing & Lawn Care in Thibodaux, LA | TIMCO',
     description: 'Overgrown yard cleared, then your lawn kept on a schedule — residential land management across the Bayou Region.',
     url: `${SITE.baseUrl}/services/${SLUG}`,
+    images: [ogImage],
   },
   alternates: { canonical: `${SITE.baseUrl}/services/${SLUG}` },
 }

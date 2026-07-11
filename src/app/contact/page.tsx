@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import ContactForm from '@/components/ContactForm'
-import { SITE } from '@/lib/site'
+import { SITE, ogImage } from '@/lib/site'
 
 export const metadata: Metadata = {
   title: 'Contact – Land Management & Clearing, Thibodaux LA',
@@ -9,6 +9,7 @@ export const metadata: Metadata = {
     title: `Contact ${SITE.name} | Thibodaux, LA`,
     description: `Request a free quote from TIMCO. Call ${SITE.phoneDisplay} or fill out the contact form.`,
     url: `${SITE.baseUrl}/contact`,
+    images: [ogImage],
   },
   alternates: { canonical: `${SITE.baseUrl}/contact` },
 }

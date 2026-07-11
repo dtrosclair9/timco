@@ -1,19 +1,47 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { SITE } from '@/lib/site'
+import { SITE, ogImage } from '@/lib/site'
 
 export const metadata: Metadata = {
   title: 'Privacy Policy',
-  description: `${SITE.legalName}'s privacy policy. What we collect, how we use it, and the third parties involved when you contact us.`,
+  description: `${SITE.legalName}'s privacy policy — what this land management site collects through the contact form, how we use it, the third parties involved, and how to reach us.`,
+  openGraph: {
+    title: `Privacy Policy | ${SITE.name}`,
+    description: `How ${SITE.legalName} collects, uses, and protects the information you send through this website.`,
+    url: `${SITE.baseUrl}/privacy`,
+    images: [ogImage],
+  },
   alternates: { canonical: `${SITE.baseUrl}/privacy` },
   robots: { index: true, follow: true },
 }
 
 const LAST_UPDATED = 'June 8, 2026'
 
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: `Privacy Policy | ${SITE.legalName}`,
+  url: `${SITE.baseUrl}/privacy`,
+  description: `The privacy policy for ${SITE.legalName}, a land management company in ${SITE.address.city}, ${SITE.address.region}. Explains what information the website collects through its contact form, how it is used, and the third-party services involved.`,
+  isPartOf: {
+    '@type': 'WebSite',
+    name: SITE.name,
+    url: SITE.baseUrl,
+  },
+  about: {
+    '@type': 'LocalBusiness',
+    name: SITE.legalName,
+    url: SITE.baseUrl,
+    telephone: SITE.phoneRaw,
+    email: SITE.email,
+  },
+}
+
 export default function PrivacyPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+
       <section className="bg-primary text-white">
         <div className="container-wide py-16">
           <p className="section-label">Legal</p>

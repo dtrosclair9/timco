@@ -3,7 +3,7 @@ import { Inter, Oswald } from 'next/font/google'
 import './globals.css'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
-import { SITE } from '@/lib/site'
+import { SITE, ogImage } from '@/lib/site'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -49,14 +49,7 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: SITE.baseUrl,
     siteName: SITE.name,
-    images: [
-      {
-        url: '/images/hero-restoration.jpg',
-        width: 1200,
-        height: 630,
-        alt: `${SITE.name} – Thibodaux, LA`,
-      },
-    ],
+    images: [ogImage],
   },
   twitter: {
     card: 'summary_large_image',

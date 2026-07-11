@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import { SITE } from '@/lib/site'
+import { SITE, ogImage } from '@/lib/site'
 
 export const metadata: Metadata = {
   title: `About – ${SITE.owner}, Land Management`,
@@ -10,6 +10,7 @@ export const metadata: Metadata = {
     title: `About ${SITE.name} | Land Management in Thibodaux, LA`,
     description: `Meet ${SITE.owner}, owner of ${SITE.name} — land management, clearing, and grounds care from Thibodaux, Louisiana.`,
     url: `${SITE.baseUrl}/about`,
+    images: [ogImage],
   },
   alternates: { canonical: `${SITE.baseUrl}/about` },
 }

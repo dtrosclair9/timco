@@ -35,6 +35,17 @@ export const SITE = {
   established: 2021,
 } as const
 
+// Shared Open Graph image — a real 1200×630 asset (public/images/og-image.jpg).
+// Spread `images: [ogImage]` into every page's openGraph so it renders on inner
+// pages too (Next replaces, does not deep-merge, a page-level openGraph object).
+// NOTE: intentionally NOT `as const` — Next's OpenGraph image type needs mutable fields.
+export const ogImage = {
+  url: '/images/og-image.jpg',
+  width: 1200,
+  height: 630,
+  alt: 'TIMCO — Land Restoration & Management in Thibodaux, LA',
+}
+
 // TIMCO is a land management company. Every service is the same two-part job —
 // RESTORE (reclaim neglected, overgrown ground) and MANAGE (keep it that way).
 export const SERVICES = [

@@ -10,7 +10,7 @@ const data: CityPageData = {
   parentServiceHref: '/services/commercial-land-management',
   metaTitle: 'Commercial Land Management & Grounds Care, Houma',
   metaDescription:
-    'Grounds maintenance and cleanup for Houma offices, apartments, and HOAs — clearing, mowing, reliable schedule across Terrebonne Parish. Insured.',
+    'Commercial land management for Houma offices, apartments, and HOAs — grounds maintenance, mowing, brush clearing, and cleanup across Terrebonne Parish. Insured.',
   hero: {
     image: '/images/comm-bobcat-apartments.jpg',
     imageAlt: 'TIMCO Bobcat mowing apartment grounds — commercial land management in Houma, Louisiana',

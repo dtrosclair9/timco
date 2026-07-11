@@ -10,7 +10,7 @@ const data: CityPageData = {
   parentServiceHref: '/services/residential-land-management',
   metaTitle: 'Residential Land Management & Land Clearing, Houma',
   metaDescription:
-    'Land clearing, lawn care, and cleanup for Houma homes — overgrown lots reclaimed, then grounds kept on a schedule across Terrebonne Parish. Insured.',
+    'Land clearing, lawn care, and cleanup for Houma homes — overgrown lots reclaimed, then grounds kept on a mowing schedule across Terrebonne Parish. Insured.',
   hero: {
     image: '/images/res-home-modern.jpg',
     imageAlt: 'Home with a manicured lawn after TIMCO residential land management in Houma, Louisiana',

@@ -10,7 +10,7 @@ const data: CityPageData = {
   parentServiceHref: '/services/residential-land-management',
   metaTitle: 'Residential Land Management & Land Clearing, Raceland',
   metaDescription:
-    'Land clearing, lawn care, and cleanup for Raceland homes — overgrown lots reclaimed, then grounds kept on a schedule down Bayou Lafourche. Insured.',
+    'Land clearing, lawn care, and cleanup for Raceland homes — overgrown lots reclaimed, then grounds kept on a mowing schedule down Bayou Lafourche. Insured.',
   hero: {
     image: '/images/res-home-modern.jpg',
     imageAlt: 'Home with a manicured lawn after TIMCO residential land management in Raceland, Louisiana',

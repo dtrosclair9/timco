@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import { SERVICES, SITE } from '@/lib/site'
+import { SERVICES, SITE, ogImage } from '@/lib/site'
 
 export const metadata: Metadata = {
   title: `${SITE.name} | Land Clearing & Land Management in Thibodaux, LA`,
@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     title: `${SITE.name} | Land Clearing & Land Management in Thibodaux, LA`,
     description: 'Land clearing, lawn care, bush hogging, grounds maintenance, and canal & drainage clearing across the Bayou Region. Insured.',
     url: SITE.baseUrl,
+    images: [ogImage],
   },
   alternates: { canonical: SITE.baseUrl },
 }

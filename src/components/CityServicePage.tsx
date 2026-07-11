@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { SITE } from '@/lib/site'
+import { SITE, ogImage } from '@/lib/site'
 
 export type CityPageData = {
   service: string // brand/category name — used in breadcrumb, schema serviceType, link text
@@ -298,6 +298,7 @@ export function buildMetadata(d: {
       title: `${title} | ${SITE.name}`,
       description,
       url: `${SITE.baseUrl}/services/${fullSlug}`,
+      images: [ogImage],
     },
     alternates: { canonical: `${SITE.baseUrl}/services/${fullSlug}` },
   }

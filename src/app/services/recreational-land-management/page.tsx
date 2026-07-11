@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { SITE } from '@/lib/site'
+import { SITE, ogImage } from '@/lib/site'
 import {
   ServiceHero,
   IncludedList,
@@ -20,6 +20,7 @@ export const metadata: Metadata = {
     title: 'Recreational Land Management & Bush Hogging in Thibodaux, LA | TIMCO',
     description: 'Bush hogging, land clearing, drainage, prescribed burns, and canal/right-of-way clearing for rural acreage.',
     url: `${SITE.baseUrl}/services/${SLUG}`,
+    images: [ogImage],
   },
   alternates: { canonical: `${SITE.baseUrl}/services/${SLUG}` },
 }
@@ -84,7 +85,7 @@ export default function RecreationalLandPage() {
             body: "Tim hunts and works rural ground himself — he gets why your land matters. We manage it like somebody who actually uses recreational land, not just a vendor running a mower.",
           },
           {
-            title: 'Prescribed burns done right',
+            title: 'Prescribed burns, handled safely',
             body: 'Pile burns and controlled brush burns on appropriate days, with the right equipment on site. Resets pasture and reduces wildfire load without the headache of doing it yourself.',
           },
           {
