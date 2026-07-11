@@ -71,6 +71,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={`${inter.variable} ${oswald.variable}`}>
       <body className="font-sans text-gray-800 antialiased bg-white">
+        <a href="#main" className="skip-link">Skip to main content</a>
         <Header />
         <main id="main">{children}</main>
         <Footer />

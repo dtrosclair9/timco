@@ -44,7 +44,7 @@ export default function PrivacyPage() {
 
       <section className="bg-primary text-white">
         <div className="container-wide py-16">
-          <p className="section-label">Legal</p>
+          <p className="section-label text-accent-light">Legal</p>
           <h1 className="heading-xl text-white mt-3">Privacy Policy</h1>
           <p className="text-gray-300 mt-3 text-sm">Last updated: {LAST_UPDATED}</p>
         </div>
@@ -129,7 +129,7 @@ export default function PrivacyPage() {
             </p>
 
             <p className="mt-10 text-sm">
-              <Link href="/" className="text-accent hover:text-accent-dark font-semibold uppercase tracking-mega text-xs">
+              <Link href="/" className="text-accent-dark hover:text-primary font-semibold uppercase tracking-mega text-xs">
                 ← Back to home
               </Link>
             </p>
@@ -146,7 +146,7 @@ function H2({ children }: { children: React.ReactNode }) {
 
 function Body({ children }: { children: React.ReactNode }) {
   return (
-    <div className="space-y-4 text-gray-700 leading-relaxed [&_a]:text-accent [&_a]:font-semibold [&_a:hover]:text-accent-dark [&_strong]:text-primary [&_ul]:list-disc [&_ul]:pl-6 [&_ul]:space-y-2 [&_li]:text-gray-700">
+    <div className="space-y-4 text-gray-700 leading-relaxed [&_a]:text-accent-dark [&_a]:font-semibold [&_a:hover]:text-primary [&_strong]:text-primary [&_ul]:list-disc [&_ul]:pl-6 [&_ul]:space-y-2 [&_li]:text-gray-700">
       {children}
     </div>
   )

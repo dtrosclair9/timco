@@ -98,7 +98,7 @@ export function CityServiceLayout(d: CityPageData) {
           <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/85 to-primary/40" />
         </div>
         <div className="relative container-wide py-24 md:py-32">
-          <p className="section-label">{d.city}, {d.parish}</p>
+          <p className="section-label text-accent-light">{d.city}, {d.parish}</p>
           <h1 className="heading-hero text-white mt-4 max-w-4xl text-balance">
             {d.headline ?? d.service} in<br />
             <span className="text-accent">{d.city}, LA</span>.
@@ -132,7 +132,7 @@ export function CityServiceLayout(d: CityPageData) {
             <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-5">
               {d.localContext.map((c, i) => (
                 <article key={c.heading} className="bg-gray-50 p-6 border-t-4 border-accent">
-                  <p className="font-display text-3xl text-accent/30 font-bold">0{i + 1}</p>
+                  <p className="font-display text-3xl text-accent-dark font-bold" aria-hidden="true">0{i + 1}</p>
                   <h3 className="heading-sm text-primary mt-2">{c.heading}</h3>
                   <p className="text-sm text-gray-700 mt-3 leading-relaxed">{c.body}</p>
                 </article>
@@ -227,13 +227,13 @@ export function CityServiceLayout(d: CityPageData) {
       {/* Service Area Band */}
       <section className="bg-primary text-white py-16">
         <div className="container-wide text-center">
-          <p className="section-label">Also Serving</p>
+          <p className="section-label text-accent-light">Also Serving</p>
           <h2 className="heading-lg mt-3 max-w-2xl mx-auto text-balance">
             {d.city} and the rest of the <span className="text-accent">Bayou Region</span>.
           </h2>
           <div className="mt-8 flex flex-wrap gap-2 justify-center">
             {SITE.serviceArea.cities.map((c) => (
-              <span key={c} className={`inline-block border ${c === d.city ? 'bg-accent border-accent text-white' : 'border-white/20 text-white'} text-xs font-bold uppercase tracking-mega px-4 py-2`}>
+              <span key={c} className={`inline-block border ${c === d.city ? 'bg-accent-dark border-accent-dark text-white' : 'border-white/20 text-white'} text-xs font-bold uppercase tracking-mega px-4 py-2`}>
                 {c}, LA
               </span>
             ))}

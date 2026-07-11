@@ -43,7 +43,7 @@ export default function ContactPage() {
 
       <section className="bg-primary text-white" aria-label="Contact page hero">
         <div className="container-wide py-20">
-          <p className="section-label">Get in Touch</p>
+          <p className="section-label text-accent-light">Get in Touch</p>
           <h1 className="heading-xl text-white mt-3 max-w-3xl text-balance">
             Tell {SITE.ownerShort} what you're dealing with.
           </h1>
@@ -86,7 +86,7 @@ export default function ContactPage() {
               </div>
 
               <div className="bg-primary text-white p-8">
-                <p className="section-label text-accent">Free Walkthroughs</p>
+                <p className="section-label text-accent-light">Free Walkthroughs</p>
                 <p className="heading-sm text-white mt-2">
                   No charge to look at it.
                 </p>

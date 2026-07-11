@@ -10,11 +10,30 @@
   h1, h2, h3, h4, h5, h6 {
     @apply font-display tracking-tight;
   }
+
+  /* Visible keyboard-focus indicator on every interactive element.
+     Brand red (#E5391E) clears the 3:1 non-text contrast bar on both the
+     white body and the dark (#0F0F0F) hero/footer backgrounds. */
+  :focus-visible {
+    outline: 3px solid #E5391E;
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
 }
 
 @layer components {
+  /* accent-dark (#B82613) carries white text at 6.3:1 — the brighter accent
+     (#E5391E) only reaches 4.25:1 and fails AA for the button label. */
   .btn-accent {
-    @apply bg-accent hover:bg-accent-dark text-white font-semibold uppercase tracking-wider text-sm px-7 py-3.5 transition-colors duration-200 inline-flex items-center justify-center gap-2;
+    @apply bg-accent-dark hover:brightness-90 text-white font-semibold uppercase tracking-wider text-sm px-7 py-3.5 transition duration-200 inline-flex items-center justify-center gap-2;
+  }
+
+  /* Skip-to-content link — hidden until keyboard-focused. */
+  .skip-link {
+    @apply sr-only;
+  }
+  .skip-link:focus {
+    @apply not-sr-only fixed top-3 left-3 z-[100] bg-primary text-white font-semibold uppercase tracking-wider text-sm px-5 py-3;
   }
 
   .btn-outline-light {
@@ -26,7 +45,7 @@
   }
 
   .btn-ghost {
-    @apply text-accent hover:text-accent-dark font-semibold uppercase tracking-wider text-sm transition-colors duration-200 inline-flex items-center gap-1.5;
+    @apply text-accent-dark hover:text-primary font-semibold uppercase tracking-wider text-sm transition-colors duration-200 inline-flex items-center gap-1.5;
   }
 
   .section-padding {
@@ -41,8 +60,11 @@
     @apply max-w-4xl mx-auto px-4 sm:px-6 lg:px-8;
   }
 
+  /* Default sits on light (white / gray-50) sections — accent-dark (#B82613)
+     hits 6.3:1. Dark hero/band sections add `text-accent-light` to override,
+     which reaches 6.0:1 on the #0F0F0F background. */
   .section-label {
-    @apply text-accent uppercase tracking-mega text-xs font-bold font-sans;
+    @apply text-accent-dark uppercase tracking-mega text-xs font-bold font-sans;
   }
 
   .heading-hero {

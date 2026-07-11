@@ -98,7 +98,7 @@ export default function HomePage() {
         </div>
 
         <div className="relative container-wide py-28 md:py-40 lg:py-48">
-          <p className="section-label">{SITE.address.city}, {SITE.address.region} · {SITE.tagline}</p>
+          <p className="section-label text-accent-light">{SITE.address.city}, {SITE.address.region} · {SITE.tagline}</p>
           <h1 className="heading-hero text-white mt-5 max-w-4xl text-balance">
             We restore &amp;<br />
             <span className="text-accent">manage land</span>.
@@ -205,7 +205,7 @@ export default function HomePage() {
                 </div>
                 <div className="p-6">
                   <p className="text-sm text-gray-700 leading-relaxed">{service.lead}</p>
-                  <p className="mt-4 text-accent text-xs font-bold uppercase tracking-mega group-hover:text-accent-dark transition-colors">
+                  <p className="mt-4 text-accent-dark text-xs font-bold uppercase tracking-mega group-hover:text-primary transition-colors">
                     Learn more →
                   </p>
                 </div>
@@ -228,7 +228,7 @@ export default function HomePage() {
                 sizes="(max-width: 1024px) 100vw, 40vw"
               />
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-primary to-transparent p-6 text-white">
-                <p className="section-label text-accent">Owner / Operator</p>
+                <p className="section-label text-accent-light">Owner / Operator</p>
                 <p className="heading-md text-white mt-1">{SITE.owner}</p>
               </div>
             </div>
@@ -261,7 +261,7 @@ export default function HomePage() {
       {/* ───── SERVICE AREA STRIP ───── */}
       <section className="bg-primary text-white py-16 border-y border-white/10" aria-labelledby="area-heading">
         <div className="container-wide text-center">
-          <p className="section-label">Where We Work</p>
+          <p className="section-label text-accent-light">Where We Work</p>
           <h2 id="area-heading" className="heading-lg mt-3 max-w-2xl mx-auto text-balance">
             Based in Thibodaux. Working across <span className="text-accent">Lafourche, Terrebonne & Assumption</span>.
           </h2>
@@ -349,7 +349,7 @@ function BeforeAfter({
             className="object-cover"
             sizes="(max-width: 768px) 50vw, 25vw"
           />
-          <span className="absolute top-2 left-2 bg-accent text-white text-[10px] font-bold uppercase tracking-mega px-2 py-1">
+          <span className="absolute top-2 left-2 bg-accent-dark text-white text-[10px] font-bold uppercase tracking-mega px-2 py-1">
             After
           </span>
         </div>

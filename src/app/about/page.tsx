@@ -64,7 +64,7 @@ export default function AboutPage() {
       {/* Hero */}
       <section className="bg-primary text-white" aria-label="About page hero">
         <div className="container-wide py-20 md:py-28">
-          <p className="section-label">About</p>
+          <p className="section-label text-accent-light">About</p>
           <h1 className="heading-xl text-white mt-3 max-w-3xl text-balance">
             A land manager,<br />through and through.
           </h1>
@@ -89,7 +89,7 @@ export default function AboutPage() {
                 sizes="(max-width: 1024px) 100vw, 40vw"
               />
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-primary/90 to-transparent p-6 text-white">
-                <p className="section-label text-accent">{SITE.ownerTitle}</p>
+                <p className="section-label text-accent-light">{SITE.ownerTitle}</p>
                 <p className="heading-md text-white mt-1">{SITE.owner}</p>
               </div>
             </div>
@@ -165,7 +165,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {values.map((v, i) => (
               <article key={v.title} className="bg-gray-50 p-8 border-t-4 border-accent">
-                <p className="font-display text-5xl text-accent/40 font-bold">0{i + 1}</p>
+                <p className="font-display text-5xl text-accent-dark font-bold" aria-hidden="true">0{i + 1}</p>
                 <h3 className="heading-sm text-primary mt-3">{v.title}</h3>
                 <p className="text-sm text-gray-700 mt-3 leading-relaxed">{v.body}</p>
               </article>
@@ -177,7 +177,7 @@ export default function AboutPage() {
       {/* Service area */}
       <section className="section-padding bg-primary text-white" aria-labelledby="area-heading">
         <div className="container-wide text-center">
-          <p className="section-label">Where We Work</p>
+          <p className="section-label text-accent-light">Where We Work</p>
           <h2 id="area-heading" className="heading-lg mt-3 text-white max-w-2xl mx-auto text-balance">
             Serving the Bayou Region from Hwy&nbsp;308.
           </h2>

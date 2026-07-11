@@ -22,7 +22,7 @@ export function ServiceHero({
         <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/85 to-primary/40" />
       </div>
       <div className="relative container-wide py-24 md:py-32">
-        <p className="section-label">{label}</p>
+        <p className="section-label text-accent-light">{label}</p>
         <h1 className="heading-hero text-white mt-4 max-w-4xl text-balance">{title}</h1>
         <div className="lede text-gray-200 mt-6 max-w-2xl">{intro}</div>
         <div className="mt-9 flex flex-wrap gap-3">
@@ -55,7 +55,7 @@ export function WhyGrid({
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {items.map((it, i) => (
             <article key={it.title} className="border-l-4 border-accent pl-6 py-2">
-              <p className="font-display text-4xl text-accent/30 font-bold">0{i + 1}</p>
+              <p className="font-display text-4xl text-accent-dark font-bold" aria-hidden="true">0{i + 1}</p>
               <h3 className="heading-sm text-primary mt-2">{it.title}</h3>
               <p className="text-sm text-gray-700 mt-3 leading-relaxed">{it.body}</p>
             </article>
@@ -138,7 +138,7 @@ export function ServiceAreaBand({ cityPages }: { cityPages: { href: string; labe
   return (
     <section className="bg-primary text-white py-16 border-y border-white/10">
       <div className="container-wide text-center">
-        <p className="section-label">Service Area</p>
+        <p className="section-label text-accent-light">Service Area</p>
         <h2 className="heading-lg mt-3 max-w-2xl mx-auto text-balance">
           Based in <span className="text-accent">{SITE.address.city}</span>. Working across the Bayou Region.
         </h2>

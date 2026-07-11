@@ -47,7 +47,7 @@ export default function ServicesPage() {
 
       <section className="bg-primary text-white" aria-label="Services page hero">
         <div className="container-wide py-20 md:py-28">
-          <p className="section-label">Services</p>
+          <p className="section-label text-accent-light">Services</p>
           <h1 className="heading-xl text-white mt-3 max-w-3xl text-balance">
             We restore &amp; manage land. Out of one Hwy&nbsp;308 HQ.
           </h1>
@@ -99,7 +99,7 @@ function SectionTitle({ label, href, heading, body }: { label: string; href?: st
     <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
       <div className="max-w-xl">
         {href ? (
-          <Link href={href} className="section-label text-accent hover:text-accent-dark inline-block">
+          <Link href={href} className="section-label text-accent-dark hover:text-primary inline-block">
             {label} →
           </Link>
         ) : (
@@ -136,7 +136,7 @@ function ServiceCard(s: ServiceCardProps) {
       </div>
       <div className="p-6 flex-1 flex flex-col">
         <p className="text-sm text-gray-700 leading-relaxed flex-1">{s.lead}</p>
-        <p className="mt-4 text-accent text-xs font-bold uppercase tracking-mega group-hover:text-accent-dark transition-colors">
+        <p className="mt-4 text-accent-dark text-xs font-bold uppercase tracking-mega group-hover:text-primary transition-colors">
           Service details →
         </p>
       </div>

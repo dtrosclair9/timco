@@ -24,7 +24,7 @@ export default function Footer() {
               Land restoration and management — residential, commercial, and recreational — out of {SITE.address.city}, {SITE.address.region}.
               Serving {SITE.serviceArea.parishes.join(', ')} parishes.
             </p>
-            <p className="mt-4 text-xs uppercase tracking-mega text-gray-500">
+            <p className="mt-4 text-xs uppercase tracking-mega text-gray-400">
               Insured · {SITE.owner}, {SITE.ownerTitle}
             </p>
           </div>
@@ -86,10 +86,12 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-white/10 mt-12 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-gray-500">
+        <div className="border-t border-white/10 mt-12 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-gray-400">
           <p>&copy; {year} {SITE.legalName}. All rights reserved.</p>
           <div className="flex items-center gap-4">
-            <Link href="/privacy" className="hover:text-accent transition-colors">Privacy Policy</Link>
+            <Link href="/privacy" className="hover:text-accent-light transition-colors">Privacy Policy</Link>
+            <span aria-hidden="true">·</span>
+            <Link href="/accessibility" className="hover:text-accent-light transition-colors">Accessibility</Link>
             <span aria-hidden="true">·</span>
             <span>Est. {SITE.established}</span>
           </div>

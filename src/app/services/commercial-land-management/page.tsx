@@ -86,14 +86,14 @@ export default function CommercialLandManagementPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <article className="bg-gray-50 p-8 border-t-4 border-accent">
-              <p className="text-xs font-bold uppercase tracking-mega text-accent">Offices &amp; Apartments</p>
+              <p className="text-xs font-bold uppercase tracking-mega text-accent-dark">Offices &amp; Apartments</p>
               <h3 className="heading-sm text-primary mt-2">Frontage that stays sharp.</h3>
               <p className="text-sm text-gray-700 mt-3 leading-relaxed">
                 Recurring maintenance for office parks, apartment complexes, and mixed-use sites. Predictable monthly invoice, certificate of insurance on file, reliable visit schedule. Storm callouts prioritized for accounts already on the books.
               </p>
             </article>
             <article className="bg-gray-50 p-8 border-t-4 border-accent">
-              <p className="text-xs font-bold uppercase tracking-mega text-accent">HOAs &amp; Common Areas</p>
+              <p className="text-xs font-bold uppercase tracking-mega text-accent-dark">HOAs &amp; Common Areas</p>
               <h3 className="heading-sm text-primary mt-2">Entrances, medians, shared grounds.</h3>
               <p className="text-sm text-gray-700 mt-3 leading-relaxed">
                 Subdivision entrances, retention areas, and common grounds kept presentable for residents and boards. One point of contact, one schedule, one invoice — no chasing down separate crews for separate tasks.
