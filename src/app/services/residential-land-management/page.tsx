@@ -7,6 +7,7 @@ import {
   PhotoStrip,
   ServiceAreaBand,
   ServiceCta,
+  ServiceFaqs,
   buildServiceSchema,
 } from '@/components/ServiceFrame'
 
@@ -116,6 +117,29 @@ export default function ResidentialLandManagementPage() {
           { src: '/images/comm-after-mobile.jpg', alt: 'Single-story home with a neatly mowed lawn in Thibodaux' },
           { src: '/images/comm-weed-eating.jpg', alt: 'TIMCO crew weed eating a home edge' },
           { src: '/images/comm-tree-work.jpg', alt: 'TIMCO truck hauling cut branches from a residential trim job' },
+        ]}
+      />
+
+      {/* TODO(owner): confirm specifics (price/lot-clearing ranges, typical mow cadence) to strengthen */}
+      <ServiceFaqs
+        heading="Home land clearing and lawn care, answered."
+        faqs={[
+          {
+            q: 'How much does it cost to clear an overgrown residential lot?',
+            a: 'It depends on the size of the lot, how thick the brush and small trees have gotten, whether there is debris to haul off, and how easily equipment can get in. A yard that just fell behind clears for far less than a lot that has grown over for years. Rather than guess, call us for a free estimate — we will look at your lot and put an honest number on the clearing, including hauling the debris away.',
+          },
+          {
+            q: 'Do I have to sign a long-term contract for lawn care?',
+            a: 'No. Residential lawn and grounds care is month to month — stay because the work is good, not because you are locked in. You can ramp visits up for the summer growing season, pause over winter, or drop back to a one-time clearing whenever your yard needs it. Set the cadence that fits your place and we keep the visit booked.',
+          },
+          {
+            q: 'What happens to the brush and debris after you clear my yard?',
+            a: 'Haul-off is part of the job. When we clear an overgrown lot or trim back trees and shrubs, we take the brush, scrub, and debris with us so you are not left with piles to deal with, and we clean up drainage the growth was choking off in the process. You come home to a yard that is actually usable, not a mess pushed to the property line.',
+          },
+          {
+            q: 'How often will you mow and maintain my lawn during the Louisiana growing season?',
+            a: 'Through the warm months, most Bayou Region yards want cutting every week or every other week to stay ahead of the growth, easing off as things slow down in the cooler season. We fit the schedule to your lawn and how you like it kept — edges, beds, and trim included — and the same local crew shows up on the cadence you set so the yard never gets ahead of you. Call us and we will recommend a rhythm and quote it.',
+          },
         ]}
       />
 

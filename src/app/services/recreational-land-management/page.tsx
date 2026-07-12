@@ -7,6 +7,7 @@ import {
   PhotoStrip,
   ServiceAreaBand,
   ServiceCta,
+  ServiceFaqs,
   buildServiceSchema,
 } from '@/components/ServiceFrame'
 
@@ -119,6 +120,29 @@ export default function RecreationalLandPage() {
           { src: '/images/land-deer-stand.jpg', alt: 'Wooded canal with footbridge and feeders on recreational land' },
           { src: '/images/land-bayou-dock-1.jpg', alt: 'Concrete dock and piling on a calm bayou serving recreational land' },
           { src: '/images/land-field-cleared.jpg', alt: 'A freshly cleared field after TIMCO land reclamation' },
+        ]}
+      />
+
+      {/* TODO(owner): confirm specifics (price/acre ranges, typical timeline) to strengthen */}
+      <ServiceFaqs
+        heading="Recreational land management, answered."
+        faqs={[
+          {
+            q: 'When is the best time to clear and bush-hog recreational land in South Louisiana?',
+            a: 'Late fall through early spring is usually the window for the heaviest work. Cooler, drier months firm up the ground so equipment can reach back acreage without tearing it up, growth has died back so land clearing and bush hogging go faster, and it lines up ahead of hunting season. That said, the Bayou Region stays green most of the year, so ongoing cutting and spraying happen right through the warm months too. The real answer depends on how wet your ground is and how grown-over it has gotten — call us for a free walkthrough and we will tell you the best time for your specific tract.',
+          },
+          {
+            q: 'Can you reach land that only has boat or limited access?',
+            a: 'Often, yes. A lot of recreational and hunting ground across Lafourche, Terrebonne, and Assumption parishes sits behind a canal, a servitude, or a stretch with no real road, and reclaiming canals, bayous, and right-of-ways is work TIMCO takes pride in — by boat or on foot, boots and chainsaws. Access is the biggest factor in what a job takes, so the honest step is a walkthrough: send us the location and how you currently get to it, and we will tell you what is workable before quoting anything.',
+          },
+          {
+            q: 'What is the difference between bush hogging and forestry mulching?',
+            a: 'Bush hogging cuts down grass, weeds, and light brush with a rotary mower to keep open ground open, and it is the right tool for fields, food plots, and turn-rows. Forestry mulching grinds heavier brush, saplings, and small trees into mulch that stays on the ground as ground cover, so it is what you want when acreage has grown over into thick scrub and you need to reclaim it. Many overgrown tracts need heavier clearing first, then bush hogging to maintain. On a walkthrough we will tell you which your land actually needs so you are not paying for more machine than the job calls for.',
+          },
+          {
+            q: 'How much does it cost to clear recreational acreage per acre?',
+            a: 'It depends on the acreage, how thick the brush and trees are, how the land drains, and how easy it is to get equipment in — a clean field mows for far less than dense, wet, boat-access scrub. Because those variables swing the number so much, we do not quote sight-unseen. Call us for a free estimate and Tim will walk the land, then put an honest number on a one-time reclaim, a seasonal plan, or both.',
+          },
         ]}
       />
 

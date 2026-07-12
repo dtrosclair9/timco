@@ -7,6 +7,7 @@ import {
   PhotoStrip,
   ServiceAreaBand,
   ServiceCta,
+  ServiceFaqs,
   buildServiceSchema,
 } from '@/components/ServiceFrame'
 
@@ -144,6 +145,29 @@ export default function CommercialLandManagementPage() {
           { src: '/images/comm-equipment-shed.jpg', alt: 'TIMCO Bobcat loader and trailer staged for a commercial job' },
           { src: '/images/comm-weed-eating.jpg', alt: 'TIMCO crew weed eating along a commercial grounds edge' },
           { src: '/images/comm-2story-truck.jpg', alt: 'Two-story commercial building with grounds maintained by TIMCO' },
+        ]}
+      />
+
+      {/* TODO(owner): confirm specifics (price/visit ranges, typical cadence per site type) to strengthen */}
+      <ServiceFaqs
+        heading="Commercial grounds care, answered."
+        faqs={[
+          {
+            q: 'Can you provide a certificate of insurance (COI) for our property?',
+            a: 'Yes. TIMCO carries liability and equipment coverage, and a certificate of insurance is available on request — the document most property managers, HOA boards, and commercial owners need on file before a vendor works the grounds. Tell us who to name and where to send it, and we will get the COI over so you are covered before the first visit.',
+          },
+          {
+            q: 'How often should commercial grounds be maintained in South Louisiana?',
+            a: 'Through the Bayou Region growing season, most offices, apartment complexes, and HOA common areas need cutting on a weekly or every-other-week schedule to keep frontage sharp, tapering off in the cooler months when growth slows. Higher-visibility entrances and sightline areas sometimes want more frequent attention than back lots. We set the cadence to the site instead of forcing one schedule on every property — send the address and we will recommend a visit rhythm and quote it upfront.',
+          },
+          {
+            q: 'Do you handle storm and hurricane debris cleanup for commercial sites?',
+            a: 'Yes. Downed branches, blown-in brush, and debris blocking drainage after a weather event are common commercial callouts across Lafourche and Terrebonne parishes, and accounts already on a recurring schedule get priority because we already know the grounds. Storm cleanups are quoted separately from the recurring visit so your regular monthly invoice stays predictable.',
+          },
+          {
+            q: 'How is commercial grounds maintenance priced?',
+            a: 'It comes down to the size of the site, what the scope covers — mowing only versus mowing plus beds, trees, and haul-off — and how often we visit. Recurring maintenance is quoted upfront as a predictable number, while one-time resets and storm cleanups are quoted on their own. Call us for a free site walkthrough and we will put firm numbers to a recurring plan, a reset, or both.',
+          },
         ]}
       />
 

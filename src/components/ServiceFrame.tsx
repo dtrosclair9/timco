@@ -195,6 +195,42 @@ export function ServiceCta({
   )
 }
 
+export function ServiceFaqs({ heading, faqs }: { heading?: string; faqs: { q: string; a: string }[] }) {
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((f) => ({
+      '@type': 'Question',
+      name: f.q,
+      acceptedAnswer: { '@type': 'Answer', text: f.a },
+    })),
+  }
+  return (
+    <section className="section-padding bg-gray-50">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <div className="container-narrow">
+        <div className="text-center mb-12">
+          <p className="section-label">FAQ</p>
+          <h2 className="heading-xl text-primary mt-3 text-balance">{heading ?? 'Common questions, answered.'}</h2>
+        </div>
+        <div className="space-y-4">
+          {faqs.map((f) => (
+            <details key={f.q} className="bg-white border border-gray-200 group">
+              <summary className="px-6 py-5 cursor-pointer list-none flex items-start justify-between gap-4 hover:bg-gray-50 transition-colors">
+                <span className="font-display font-semibold text-primary text-lg uppercase tracking-tight pr-4">{f.q}</span>
+                <svg className="w-5 h-5 text-accent shrink-0 mt-1 transition-transform group-open:rotate-45" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M12 4v16m8-8H4" />
+                </svg>
+              </summary>
+              <div className="px-6 pb-6 text-sm text-gray-700 leading-relaxed">{f.a}</div>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+
 export function buildServiceSchema({
   slug,
   name,
