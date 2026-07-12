@@ -62,7 +62,8 @@
 
   /* Default sits on light (white / gray-50) sections — accent-dark (#B82613)
      hits 6.3:1. Dark hero/band sections add `text-accent-light` to override,
-     which reaches 6.0:1 on the #0F0F0F background. */
+     the deep brand red (#EA3D20) which reaches 4.73:1 on the #0F0F0F
+     background — clears AA small-text 4.5:1 while keeping brand punch. */
   .section-label {
     @apply text-accent-dark uppercase tracking-mega text-xs font-bold font-sans;
   }

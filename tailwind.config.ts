@@ -16,7 +16,12 @@ const config: Config = {
         },
         accent: {
           DEFAULT: '#E5391E',
-          light: '#F1633F',
+          // Deep, saturated brand red for dark backgrounds. Nearly identical to
+          // the brand DEFAULT (#E5391E) but nudged just bright enough to clear
+          // AA small-text 4.5:1 on #0F0F0F with margin (4.73:1) instead of the
+          // razor-thin 4.505:1 of the DEFAULT. Restores brand punch vs the old
+          // washed-out coral (#F1633F); also passes 3:1 for large text + icons.
+          light: '#EA3D20',
           dark: '#B82613',
         },
       },
